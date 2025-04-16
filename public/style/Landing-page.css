@@ -28,6 +28,45 @@
   background-color: var(--primary);
 }
 
+.mobile-search-bar {
+  flex-grow: 1;
+  margin: 0 40px;
+  position: relative;
+}
+.mobile-search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background-color: var(--primary);
+  outline: none;
+  font-size: 14px;
+}
+.mobile-search-bar button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.mobile-search-bar button:hover {
+  background-color: var(--primary);
+}
+.mobile-search-bar ::-moz-placeholder {
+  color: var(--light);
+  font-size: 14px;
+}
+.mobile-search-bar ::placeholder {
+  color: var(--light);
+  font-size: 14px;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -73,7 +112,7 @@
 }
 
 .responsive-navbar {
-  background-color: #0d3b66;
+  background-color: var(--primary);
 }
 
 @media (min-width: 768px) {
