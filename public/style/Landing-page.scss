@@ -11,7 +11,7 @@
         border: 1px solid var(--border);
         outline: none;
         font-size: 14px;
-        color: #FFFFFF;
+        color: var(--primary);
     }
 
     button {
@@ -89,6 +89,10 @@
 
 .nav-links li:hover {
     background-color: var(--secondary);
+}
+
+.nav-btn ul li a:hover{
+   color: var(--accent);
 }
 
 .dropdown {
