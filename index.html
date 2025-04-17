@@ -115,43 +115,69 @@
             <div class="offcanvas-body">
                 <ul class="list-unstyled nav-links">
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Accueil</a></li>
-                    <li">
-                        <a href="#" class="text-white text-decoration-none d-block py-2">Processeurs</a>
 
-                        <ul class="list-unstyled ps-3 nav-links">
+                    <li>
+                        <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between" data-bs-toggle="collapse"
+                            href="#collapseProcesseurs" role="button" aria-expanded="false"
+                            aria-controls="collapseProcesseurs">
+                            Processeurs
+                            <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProcesseurs"></i>
+                        </a>
+                        <ul class="collapse list-unstyled ps-3" id="collapseProcesseurs">
                             <li><a href="#" class="text-white d-block py-1">Intel</a></li>
                             <li><a href="#" class="text-white d-block py-1">AMD</a></li>
                             <li><a href="#" class="text-white d-block py-1">Serveur</a></li>
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#" class="text-white text-decoration-none d-block py-2">Cartes graphiques</a>
-                        <ul class="list-unstyled ps-3 nav-links">
+                        <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between" data-bs-toggle="collapse"
+                            href="#collapseGPU" role="button" aria-expanded="false" aria-controls="collapseGPU">
+                            Cartes graphiques
+                            <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProcesseurs"></i>
+                        </a>
+                        <ul class="collapse list-unstyled ps-3" id="collapseGPU">
                             <li><a href="#" class="text-white d-block py-1">NVIDIA GeForce</a></li>
                             <li><a href="#" class="text-white d-block py-1">AMD Radeon</a></li>
                             <li><a href="#" class="text-white d-block py-1">Professionnelles</a></li>
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#" class="text-white text-decoration-none d-block py-2">Stockage</a>
-                        <ul class="list-unstyled ps-3 nav-links">
+                        <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between" data-bs-toggle="collapse"
+                            href="#collapseStorage" role="button" aria-expanded="false" aria-controls="collapseStorage">
+                            Stockage
+                            <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProcesseurs"></i>
+                        </a>
+                        <ul class="collapse list-unstyled ps-3" id="collapseStorage">
                             <li><a href="#" class="text-white d-block py-1">SSD</a></li>
                             <li><a href="#" class="text-white d-block py-1">Disques durs</a></li>
                             <li><a href="#" class="text-white d-block py-1">NAS</a></li>
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#" class="text-white text-decoration-none d-block py-2">Mémoire</a>
-                        <ul class="list-unstyled ps-3 nav-links">
+                        <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between" data-bs-toggle="collapse"
+                            href="#collapseMemory" role="button" aria-expanded="false" aria-controls="collapseMemory">
+                            Mémoire
+                            <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProcesseurs"></i>
+                        </a>
+                        <ul class="collapse list-unstyled ps-3" id="collapseMemory">
                             <li><a href="#" class="text-white d-block py-1">DDR4</a></li>
                             <li><a href="#" class="text-white d-block py-1">DDR5</a></li>
                             <li><a href="#" class="text-white d-block py-1">ECC</a></li>
                         </ul>
                     </li>
+
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Périphériques</a></li>
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Contact</a></li>
                 </ul>
             </div>
+
         </div>
 
     </header>

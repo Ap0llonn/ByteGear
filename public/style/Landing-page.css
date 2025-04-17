@@ -126,4 +126,12 @@
     width: 100%;
     background-color: #FFFFFF;
   }
+}
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse.show + .rotate-icon,
+a[aria-expanded=true] .rotate-icon {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=Landing-page.css.map */
