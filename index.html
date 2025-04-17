@@ -19,7 +19,9 @@
         <nav
             class="container-md pt-1 pb-1 navbar responsive-navbar navbar-expand-lg p-0 d-flex justify-content-between align-items-center">
             <div class="logo">
-               <a class="text-decoration-none" href="#"> <h1 class="text-body-primary fw-bold d-none d-md-block">ByteGear</h1></a>
+                <a class="text-decoration-none" href="#">
+                    <h1 class="text-body-primary fw-bold d-none d-md-block">ByteGear</h1>
+                </a>
             </div>
             <div class="search-bar d-none d-md-block">
                 <form class="d-flex" role="search">
@@ -34,11 +36,12 @@
                 </ul>
             </div>
 
-            <div class="container p-0 pe-4 pe-sm-0 ps-sm-0 ps-4 pt-2 d-block d-md-none justify-content-between align-items-center">
+            <div
+                class="container p-0 pe-4 pe-sm-0 ps-sm-0 ps-4 pt-2 d-block d-md-none justify-content-between align-items-center">
 
                 <div class="d-flex justify-content-between align-items-center gap-3">
-                    <button class="navbar-toggler border-0 p-0 m-0 text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav">
+                    <button class="navbar-toggler border-0 p-0 m-0 text-white" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas">
                         <i class="bi bi-list fs-1"></i>
                     </button>
                     <ul class="list-unstyled d-flex align-items-center gap-3 m-0">
@@ -49,6 +52,8 @@
 
 
             </div>
+
+
         </nav>
         <nav class="b-primary container-fluid p-md-0 pt-2 p-4">
             <div class="container p-0">
@@ -99,6 +104,55 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileOffcanvas"
+            aria-labelledby="mobileOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-white" id="mobileOffcanvasLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-unstyled nav-links">
+                    <li><a href="#" class="text-white text-decoration-none d-block py-2">Accueil</a></li>
+                    <li">
+                        <a href="#" class="text-white text-decoration-none d-block py-2">Processeurs</a>
+
+                        <ul class="list-unstyled ps-3 nav-links">
+                            <li><a href="#" class="text-white d-block py-1">Intel</a></li>
+                            <li><a href="#" class="text-white d-block py-1">AMD</a></li>
+                            <li><a href="#" class="text-white d-block py-1">Serveur</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none d-block py-2">Cartes graphiques</a>
+                        <ul class="list-unstyled ps-3 nav-links">
+                            <li><a href="#" class="text-white d-block py-1">NVIDIA GeForce</a></li>
+                            <li><a href="#" class="text-white d-block py-1">AMD Radeon</a></li>
+                            <li><a href="#" class="text-white d-block py-1">Professionnelles</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none d-block py-2">Stockage</a>
+                        <ul class="list-unstyled ps-3 nav-links">
+                            <li><a href="#" class="text-white d-block py-1">SSD</a></li>
+                            <li><a href="#" class="text-white d-block py-1">Disques durs</a></li>
+                            <li><a href="#" class="text-white d-block py-1">NAS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none d-block py-2">Mémoire</a>
+                        <ul class="list-unstyled ps-3 nav-links">
+                            <li><a href="#" class="text-white d-block py-1">DDR4</a></li>
+                            <li><a href="#" class="text-white d-block py-1">DDR5</a></li>
+                            <li><a href="#" class="text-white d-block py-1">ECC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="text-white text-decoration-none d-block py-2">Périphériques</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block py-2">Contact</a></li>
+                </ul>
+            </div>
+        </div>
 
     </header>
     <main></main>
