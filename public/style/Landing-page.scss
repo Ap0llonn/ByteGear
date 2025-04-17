@@ -91,6 +91,10 @@
     background-color: var(--secondary);
 }
 
+.nav-btn ul li a:hover{
+   color: var(--accent);
+}
+
 .dropdown {
     position: absolute;
     background-color: white;
