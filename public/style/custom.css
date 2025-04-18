@@ -29,7 +29,17 @@
     background-color: var(--primary);
 }
 
+
 .b-light {
+    background-color: var(--light);
+}
+
+.b-border{
+    background-color: var(--border);
+
+}
+
+.b-light-border {
     background-color: var(--light);
     border-top: var(--border) solid 1px;
     border-bottom: var(--border) solid 1px;
