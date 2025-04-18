@@ -134,4 +134,28 @@
 .collapse.show + .rotate-icon,
 a[aria-expanded=true] .rotate-icon {
   transform: rotate(180deg);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
 }/*# sourceMappingURL=Landing-page.css.map */
