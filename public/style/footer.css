@@ -1,0 +1,37 @@
+.newsletter-input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    outline: none;
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.newsletter-btn {
+    background-color: var(--accent);
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background-color: var(--secondary);
+}
+
+footer .content{
+    max-width: 250px;
+}
+
+footer .down{
+    border-top: 1px solid var(--text);
+}
+
+footer .down div, .down i{
+    color: var(--text);
+}

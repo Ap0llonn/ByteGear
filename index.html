@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./public/style/custom.css">
     <link rel="stylesheet" href="./public/style/Landing-page.css">
+    <link rel="stylesheet" href="./public/style/card.css">
+    <link rel="stylesheet" href="./public/style/footer.css">
+    <link rel="stylesheet" href="./public/style/nav.css">
 </head>
 
 <body>
 
-    <header class="p-0">
+    <header class="p-0 position-sticky b-white top-0 z-3">
         <nav
-            class="container-md pt-1 pb-1 navbar responsive-navbar navbar-expand-lg p-0 d-flex justify-content-between align-items-center">
+            class="container-md b-white pt-1 pb-1 navbar responsive-navbar navbar-expand-lg p-0 d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a class="text-decoration-none" href="#">
                     <h1 class="text-body-primary fw-bold d-none d-md-block">ByteGear</h1>
@@ -186,7 +189,8 @@
         <section class="b-light-border">
             <div
                 class="container mt-5 mb-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
-                <div class="left d-flex flex-column justify-content-center text-center text-md-start align-items-center align-items-md-start gap-3">
+                <div
+                    class="left d-flex flex-column justify-content-center text-center text-md-start align-items-center align-items-md-start gap-3">
                     <div class="title">
                         <h1 class="fw-bold text-body-primary">Composants informatiques de haute qualité</h1>
                     </div>
@@ -203,13 +207,15 @@
                 </div>
             </div>
         </section>
+
         <section class="b-light-border">
             <div class="container mt-5 mb-5">
                 <div class="up d-flex flex-row justify-content-between align-items-center gap-4">
                     <h4 class="text-body-primary fw-semibold">Catégories principal</h4>
-                    <a href="#" class="text-decoration-none text-end fs-6">voire toute les Catégories</a>
+                    <a href="#" class="text-decoration-none text-end fs-6">voir toute les Catégories</a>
                 </div>
-                <div class="down d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-3 mt-4">
+                <div
+                    class="down d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-3 mt-4">
                     <div class="category-card ">
                         <i class="icon-container bi bi-cpu text-body-primary b-border fs-1 p-3 rounded-circle"></i>
                         <h5 class="text-body-primary fw-semibold">Processeurs</h5>
@@ -226,12 +232,14 @@
                         <p>DDR5, DDR4</p>
                     </div>
                     <div class="category-card">
-                        <i class="icon-container bi bi-device-hdd text-body-primary b-border fs-1 p-3 rounded-circle"></i>
+                        <i
+                            class="icon-container bi bi-device-hdd text-body-primary b-border fs-1 p-3 rounded-circle"></i>
                         <h5 class="text-body-primary fw-semibold">Stockage</h5>
                         <p>HDD, SSD, NAS</p>
                     </div>
                     <div class="category-card">
-                        <i class="icon-container bi bi-motherboard text-body-primary b-border fs-1 p-3 rounded-circle"></i>
+                        <i
+                            class="icon-container bi bi-motherboard text-body-primary b-border fs-1 p-3 rounded-circle"></i>
                         <h5 class="text-body-primary fw-semibold">Carte mère</h5>
                         <p>ATX, ITX</p>
                     </div>
@@ -240,10 +248,355 @@
 
 
         </section>
+
+        <section>
+            <div class="container mt-5 mb-5">
+                <div class="up d-flex flex-row justify-content-between align-items-center gap-4">
+                    <h4 class="text-body-primary fw-semibold">Produit Recommendé</h4>
+                    <a href="#" class="text-decoration-none text-end fs-6">Plus de produit</a>
+                </div>
+                <div
+                    class="down row d-flex flex-row flex-wrap m-0 justify-content-between align-items-center gap-3 mt-4">
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+
+        <section>
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(max-width: 999px)"
+                                srcset="./public/res/image/index-image/carousel/slide-1-mobile.jpg">
+                            <img src="./public/res/image/index-image/carousel/slide-1.jpg" class="d-block w-100"
+                                alt="...">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 999px)"
+                                srcset="./public/res/image/index-image/carousel/slide-2-mobile.jpg">
+                            <img src="./public/res/image/index-image/carousel/slide-2.jpg" class="d-block w-100"
+                                alt="...">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 999px)"
+                                srcset="./public/res/image/index-image/carousel/slide-3-mobile.jpg">
+                            <img src="./public/res/image/index-image/carousel/slide-3.jpg" class="d-block w-100"
+                                alt="...">
+                        </picture>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="container mt-5 mb-5">
+                <div class="up d-flex flex-row justify-content-between align-items-center gap-4">
+                    <h4 class="text-body-primary fw-semibold">Produit Populaire</h4>
+                    <a href="#" class="text-decoration-none text-end fs-6">Plus de produit</a>
+                </div>
+                <div
+                    class="down row d-flex flex-row flex-wrap m-0 justify-content-between align-items-center gap-3 mt-4">
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card p-0">
+                        <div class="product-img">
+                            <img src="./public/res/image/product-image/13700k 1.png" alt="NVIDIA RTX 4070">
+                        </div>
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">Processeurs</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+                            <h5 class="product-title mt-3">Intel Core i7-13700K 5.4 GHz</h5>
+                            <p class="product-description">Processeur 16 cœurs (8P+8E) pour station de travail et gaming
+                                haut de gamme.</p>
+                            <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">649,90 $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+
+        <section class="b-light-border">
+            <div class="container mt-4 mb-5">
+                <div class="up">
+                    <h4>Pourquoi magasiner avec nous</h4>
+                </div>
+                <div class="down d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-2 mt-4">
+                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
+                        <div class="card-icon">
+                            <i class="bi bi-truck fs-1"></i>
+                        </div>
+                        <div class="card-content">
+                            <h5>Livraison rapide</h5>
+                            <p>Recevez vos produits rapidement grâce à notre service de livraison express.</p>
+                        </div>
+                    </div>
+                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
+                        <div class="card-icon">
+                            <i class="bi bi-patch-check fs-1"></i>
+                        </div>
+                        <div class="card-content">
+                            <h5>Produit Certifié</h5>
+                            <p>Tous nos produits sont certifiés, garantis et proviennent de distributeurs officiels.</p>
+                        </div>
+                    </div>
+                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
+                        <div class="card-icon">
+                            <i class="bi bi-person-badge fs-1"></i>
+                        </div>
+                        <div class="card-content">
+                            <h5>Expertise Qualifié</h5>
+                            <p>Notre équipe d'experts est là pour vous conseiller et vous aider à choisir le bon produit.</p>
+                        </div>
+                    </div>
+                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
+                        <div class="card-icon">
+                            <i class="bi bi-shield-shaded fs-1"></i>
+                        </div>
+                        <div class="card-content">
+                            <h5>Garantie Étendue</h5>
+                            <p>Profitez d'une garantie prolongée sur tous nos produits pour une tranquillité d'esprit.</p>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-
+    <footer class="b-dark pt-5 pb-1">
+        <div class="container">
+            <div class="up d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+                <div class="content">
+                    <div class="title">
+                       <h5 class="text-white fw-bold">Information</h5>
+                    </div>
+                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li><a href="" class="text-decoration-none text-body-light">Qui nous somme</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Carrière</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Nos engagements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                       <h5 class="text-white fw-bold">Produit</h5>
+                    </div>
+                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li><a href="" class="text-decoration-none text-body-light">Processeur</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Carte Graphique</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Mémoire</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Alimentation</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Stockage</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Carte mère</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Périphérique</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Accessoire</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                       <h5 class="text-white fw-bold">Compte</h5>
+                    </div>
+                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li><a href="" class="text-decoration-none text-body-light">Se connecter/Créer un compte</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Historique d'achat</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Retours de commande</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">List de souhait</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Mes informations</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                       <h5 class="text-white fw-bold">Bulletin d'informations</h5>
+                    </div>
+                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                        <p class="text-body-light ">Inscrivez-vous à notre bulletin d'informations pour recevoir les dernières
+                            nouvelles et offres spéciales.</p>
+                        <form class="d-flex flex-column gap-1" role="search">
+                            <input class="newsletter-input" type="email" placeholder="Entrez votre email" aria-label="Search">
+                            <button class="newsletter-btn" type="submit"><i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="down">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 pt-1">
+                    <div class="copyright text-body-light">© 2023 ByteGear Corp. Tous droits réservés.</div>
+                    <div class="social-icons d-flex flex-row gap-3">
+                        <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
