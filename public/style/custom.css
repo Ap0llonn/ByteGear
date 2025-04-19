@@ -25,6 +25,10 @@
     color: var(--secondary);
 }
 
+.text-body-light {
+    color: var(--light);
+}
+
 .b-primary {
     background-color: var(--primary);
 }
@@ -35,6 +39,10 @@
 
 .b-light {
     background-color: var(--light);
+}
+
+.b-dark {
+    background-color: var(--dark);
 }
 
 .b-border{
