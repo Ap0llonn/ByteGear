@@ -201,8 +201,15 @@ a[aria-expanded=true] .rotate-icon {
   font-weight: 400;
 }
 
+.why-us-card {
+  width: 18.75rem;
+}
+
 @media (max-width: 768px) {
   .category-card {
+    width: 100%;
+  }
+  .why-us-card {
     width: 100%;
   }
 }/*# sourceMappingURL=Landing-page.css.map */
