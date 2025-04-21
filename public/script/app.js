@@ -1,4 +1,5 @@
-import { initializeProduct } from "./product-list.js";
+import { initializeProduct, initPopularProduct, initRecommendeProduct } from "./product-list.js";
 
 
-initializeProduct();
+initPopularProduct();
+initRecommendeProduct();

@@ -80,7 +80,7 @@ const products = [
         "image": "./public/res/image/product-image/threadripper-5975wx.png"
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "AMD EPYC 7763 3.5 GHz",
         "price": 6999.99,
         "description": "Processeur serveur 64 cœurs/128 threads pour datacenters.",
@@ -90,7 +90,7 @@ const products = [
         "image": "./public/res/image/product-image/epyc-7763.png"
     },
     {
-        "id": 11,
+        "id": 10,
         "name": "AMD Ryzen 9 5900X 4.8 GHz",
         "price": 449.99,
         "description": "Processeur 12 cœurs/24 threads pour gaming et création de contenu.",
@@ -100,7 +100,7 @@ const products = [
         "image": "./public/res/image/product-image/ryzen-9-5900x.png"
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Intel Core i7-11700K 5.0 GHz",
         "price": 399.99,
         "description": "Processeur 8 cœurs/16 threads pour gaming et productivité.",
@@ -110,7 +110,7 @@ const products = [
         "image": "./public/res/image/product-image/11700k.png"
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "AMD Ryzen 5 5600X 4.6 GHz",
         "price": 199.99,
         "description": "Processeur 6 cœurs/12 threads pour gamers et utilisateurs polyvalents.",
@@ -120,7 +120,7 @@ const products = [
         "image": "./public/res/image/product-image/ryzen-5-5600x.png"
     },
     {
-        "id": 14,
+        "id": 13,
         "name": "Intel Core i3-12100F 4.3 GHz",
         "price": 109.99,
         "description": "Processeur 4 cœurs/8 threads pour PC d'entrée de gamme.",
@@ -130,7 +130,7 @@ const products = [
         "image": "./public/res/image/product-image/12100f.png"
     },
     {
-        "id": 15,
+        "id": 14,
         "name": "AMD Ryzen 3 4100 3.8 GHz",
         "price": 79.99,
         "description": "Processeur 4 cœurs/8 threads économique pour bureautique.",
@@ -140,7 +140,7 @@ const products = [
         "image": "./public/res/image/product-image/ryzen-3-4100.png"
     },
     {
-        "id": 16,
+        "id": 15,
         "name": "AMD Ryzen 7 5800X3D 4.5 GHz",
         "price": 329.99,
         "description": "Processeur 8 cœurs/16 threads avec cache 3D pour gaming extrême.",
@@ -150,7 +150,7 @@ const products = [
         "image": "./public/res/image/product-image/ryzen-7-5800x3d.png"
     },
     {
-        "id": 17,
+        "id": 16,
         "name": "Intel Core i9-12900K 5.2 GHz",
         "price": 549.99,
         "description": "Processeur 16 cœurs (8P+8E) performant pour gaming et création.",
@@ -160,7 +160,7 @@ const products = [
         "image": "./public/res/image/product-image/12900k.png"
     },
     {
-        "id": 18,
+        "id": 17,
         "name": "AMD Ryzen 5 3600 4.2 GHz",
         "price": 169.99,
         "description": "Processeur 6 cœurs/12 threads pour gaming et multitâche léger.",
@@ -170,7 +170,7 @@ const products = [
         "image": "./public/res/image/product-image/ryzen-5-3600.png"
     },
     {
-        "id": 19,
+        "id": 18,
         "name": "Intel Pentium Gold G6600 4.2 GHz",
         "price": 59.99,
         "description": "Processeur 2 cœurs/4 threads pour PC d'entrée de gamme.",
@@ -180,7 +180,7 @@ const products = [
         "image": "./public/res/image/product-image/pentium-g6600.png"
     },
     {
-        "id": 20,
+        "id": 19,
         "name": "AMD Athlon 3000G 3.5 GHz",
         "price": 49.99,
         "description": "Processeur 2 cœurs/4 threads avec GPU intégré pour usage basique.",
@@ -190,7 +190,7 @@ const products = [
         "image": "./public/res/image/product-image/athlon-3000g.png"
     },
     {
-        "id": 21,
+        "id": 20,
         "name": "Intel Xeon Platinum 8380 2.3 GHz",
         "price": 10999.99,
         "description": "Processeur serveur 40 cœurs/80 threads pour environnements critiques.",
@@ -200,6 +200,18 @@ const products = [
         "image": "./public/res/image/product-image/xeon-platinum-8380.png"
     }
 ];
+
+export function getRandomProduct(numberOfProducts) {
+
+    let randomProducts = [];
+
+    for (let i = 0; i < numberOfProducts; i++) {
+        const randomIndex = Math.floor(Math.random() * products.length);
+        randomProducts[i] = products[randomIndex];
+    }
+
+    return randomProducts;
+}
 
 export function getProducts() {
     return products;
