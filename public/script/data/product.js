@@ -80,16 +80,6 @@ const products = [
         "image": "./public/res/image/product-image/threadripper-5975wx.png"
     },
     {
-        "id": 9,
-        "name": "Intel Xeon W-2295 4.6 GHz",
-        "price": 1349.99,
-        "description": "Processeur workstation 18 cœurs/36 threads pour serveurs et calcul intensif.",
-        "category": "processor",
-        "brand": "Intel",
-        "inStock": true,
-        "image": "./public/res/image/product-image/xeon-w-2295.png"
-    },
-    {
         "id": 10,
         "name": "AMD EPYC 7763 3.5 GHz",
         "price": 6999.99,

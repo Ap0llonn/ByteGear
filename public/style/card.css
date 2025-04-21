@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 423px;               /* fixe la hauteur totale */
+    height: 423px;             
     border: 1px solid var(--border);
     border-radius: 4px;
     overflow: hidden;
@@ -13,34 +13,32 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-  
-  /* la zone image : taille fixe et overflow caché */
-  .product-img {
-    flex: 0 0 180px;            /* ne grandit pas, reste à 180px */
+
+  .product-img {       
+    height: 180px;   
     background-color: var(--light);
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--border);
     overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
-  /* l’image elle‑même remplit la zone */
   .product-img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;        /* ou cover si vous voulez couper un peu pour remplir */
+    object-fit: contain;    
   }
   
-  /* contenu texte : on le fait grandir pour remplir l’espace restant */
   .product-content {
-    flex: 1 1 auto;             /* rempli tout l’espace vertical restant */
+    flex: 1 1 auto;           
     display: flex;
     flex-direction: column;
-    padding: 15px;              /* ou gardez votre .p-3 Bootstrap */
+    padding: 15px;            
   }
   
-  /* on colle le footer en bas du flex‑container .product-content */
   .product-footer {
     border-top: 1px solid var(--border);
     margin-top: auto;
@@ -48,7 +46,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding-top: 0.75rem;       /* équivalent de pt-3 */
+    padding-top: 0.75rem;      
   }
   
   .product-stock {
@@ -70,8 +68,7 @@
     background-color: var(--secondary);
     border-color: var(--secondary);
   }
-  
-  /* Responsive */
+
   @media (max-width: 768px) {
     .product-card { width: 45%; }
   }

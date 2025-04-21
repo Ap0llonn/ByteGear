@@ -27,7 +27,7 @@ export function productTemplate(product) {
                             <h5 class="product-title mt-3">${product.name}</h5>
                             <p class="product-description">${product.description}</p>
                             <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                <span class="product-price">${product.price} $</span>
+                                <span class="product-price fw-bold">${product.price} $</span>
                                 <button class="add-to-cart-btn p-1 ps-2 pe-2">Ajouter</button>
                             </div>
                         </div>
