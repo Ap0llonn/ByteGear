@@ -1,9 +1,37 @@
-export function productCardList(products){
+export function productCardList(products) {
     let html = '';
     for (const product of products) {
         html += productTemplate(product);
     }
     return html;
+}
+
+export function productCardListSearch(products) {
+    let html = '';
+    for (const product of products) {
+        html += searchProductTemplate(product);
+    }
+    return html;
+}
+
+export function searchProductTemplate(product) {
+
+    return `
+                    <li class="p-2 " 
+                    data-product-price="${product.price}"
+                        data-product-name="${product.name}" 
+                        data-product-image="${product.image}"> 
+                           <a href="" class="d-flex justify-content-between align-items-center gap-3 text-decoration-none text-body-primary">
+                            <div class="left d-flex flex-row align-items-center gap-3">
+                                <img src="${product.image}" alt="" width="50px">
+                                <h4 class="m-0">${product.name}</h4>
+                            </div>
+                            <div class="right">
+                                <h5 class="m-0">${product.price} $</h5>
+                            </div>
+                           </a>
+                        </li>
+    `;
 }
 
 export function productTemplate(product) {
@@ -32,6 +60,6 @@ export function productTemplate(product) {
                             </div>
                         </div>
                     </div>
-    `
+    `;
 
 }

@@ -4,6 +4,8 @@ import { productCardList } from './templates/product-template.js';
 const popularProductContainer = document.querySelector('[data-popular-product-container]');
 const recommendeProductContainer = document.querySelector('[data-recommende-product-container]');
 
+
+
 export function initializeProduct() {
 
     const products = getProducts();
