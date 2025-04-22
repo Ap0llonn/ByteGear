@@ -121,6 +121,19 @@
   background-color: var(--primary);
 }
 
+.search-result{
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100%;
+  border: 1px solid var(--border);
+}
+
+.search-result a:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
 @media (min-width: 768px) {
   .responsive-navbar {
     width: 100%;
