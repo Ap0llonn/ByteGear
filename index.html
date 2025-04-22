@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./public/style/footer.css">
     <link rel="stylesheet" href="./public/style/nav.css">
     <script src="./public/script/app.js" type="module"></script>
+    <script src="./public/script/search-bar.js" type="module"></script>
 </head>
 
 <body>
@@ -27,11 +28,11 @@
             </div>
             <div class="search-bar d-none d-md-block">
                 <form class="d-flex" role="search">
-                    <input type="search" placeholder="Rechercher des produits..." aria-label="Search">
+                    <input type="search" placeholder="Rechercher des produits..." aria-label="Search" data-search-input>
                     <button type="submit">Rechercher</button>
                 </form>
-                <div class="b-light search-result d-none">
-                    <ul class="list-unstyled d-flex flex-column gap-2 m-0" data-search-result-container>
+                <div class="b-light search-result d-none" data-search-result-container>
+                    <ul class="list-unstyled d-flex flex-column gap-2 m-0" >
                         <li class="p-2"> 
                            <a href="" class="d-flex justify-content-between align-items-center gap-3 text-decoration-none text-body-primary">
                             <div class="left d-flex flex-row align-items-center gap-3">
