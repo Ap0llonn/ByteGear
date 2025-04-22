@@ -110,6 +110,14 @@
         color: var(--light);
         font-size: 14px;
     }
+
+    .search-result {
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        position: absolute;
+        width: 100%;
+        border: 1px solid var(--border);
+    }
 }
 
 

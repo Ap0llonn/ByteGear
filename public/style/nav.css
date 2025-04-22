@@ -99,6 +99,13 @@
   color: var(--light);
   font-size: 14px;
 }
+.mobile-search-bar .search-result {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100%;
+  border: 1px solid var(--border);
+}
 
 .nav-links a {
   color: white;
