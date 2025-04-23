@@ -18,9 +18,9 @@ for (let i = 0; i < allSearchBars.length; i++) {
             return;
         }
 
-        const results = filterProductByName(text);
+        const results = filterProductByName(text, container);
         if (results.length) {
-            renderResults(results);
+            renderResults(results, container);
         } else {
             container.innerHTML = `<ul><li>Aucun résultat pour “${text}”</li></ul>`;
         }
@@ -31,44 +31,41 @@ for (let i = 0; i < allSearchBars.length; i++) {
         container.classList.add('d-none');
     });
 
-    function renderResults(products) {
-
-        let itemsHTML = "";
-        for (let i = 0; i < products.length; i++) {
-            const p = products[i];
-            itemsHTML += searchProductTemplate(p);
-        }
-
-        container.innerHTML = '<ul class="list-unstyled d-flex flex-column gap-2 m-0">' + itemsHTML + '</ul>';
-    }
-
-    function filterProductByName(text) {
-        const terms = text
-            .toLowerCase()
-            .trim()
-            .split(/\s+/);
-
-        const all = getProducts();
-        const out = [];
-
-        for (let i = 0; i < all.length; i++) {
-            const name = all[i].name.toLowerCase();
-            let matches = true;
-
-            for (let j = 0; j < terms.length; j++) {
-                if (!name.includes(terms[j])) {
-                    matches = false;
-                    break;
-                }
-            }
-
-            if (matches) {
-                out.push(all[i]);
-            }
-        }
-
-        return out;
-    }
-
 }
+function renderResults(products, container) {
 
+    let itemsHTML = "";
+    for (let i = 0; i < products.length; i++) {
+        const p = products[i];
+        itemsHTML += searchProductTemplate(p);
+    }
+
+    container.innerHTML = '<ul class="list-unstyled d-flex flex-column gap-2 m-0">' + itemsHTML + '</ul>';
+}
+function filterProductByName(text, container) {
+    const terms = text
+        .toLowerCase()
+        .trim()
+        .split(/\s+/);
+
+    const all = getProducts();
+    const out = [];
+
+    for (let i = 0; i < all.length; i++) {
+        const name = all[i].name.toLowerCase();
+        let matches = true;
+
+        for (let j = 0; j < terms.length; j++) {
+            if (!name.includes(terms[j])) {
+                matches = false;
+                break;
+            }
+        }
+
+        if (matches) {
+            out.push(all[i]);
+        }
+    }
+
+    return out;
+}
