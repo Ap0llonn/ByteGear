@@ -41,8 +41,12 @@
         border: 1px solid var(--border);
     }
 
-    .search-result a:hover {
-        background-color: var(--accent);
+    .search-result li{
+        height: 3.75rem;
+    }
+
+    .search-result li:hover {
+        background-color: var(--border);
         color: var(--primary);
     }
 
@@ -66,6 +70,7 @@
 
     .search-result ul li {
         min-height: 3.75rem;
+        max-height: 3.75rem;
         height: 3.75rem;
     }
 }
@@ -118,6 +123,13 @@
         width: 100%;
         border: 1px solid var(--border);
     }
+
+    .search-result ul li img {
+        width: 25px;
+        height: 25px;
+        
+    }
+
 }
 
 

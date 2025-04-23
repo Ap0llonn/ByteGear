@@ -35,8 +35,11 @@
   width: 100%;
   border: 1px solid var(--border);
 }
-.search-bar .search-result a:hover {
-  background-color: var(--accent);
+.search-bar .search-result li {
+  height: 3.75rem;
+}
+.search-bar .search-result li:hover {
+  background-color: var(--border);
   color: var(--primary);
 }
 @media (min-width: 768px) {
@@ -57,6 +60,7 @@
 }
 .search-bar .search-result ul li {
   min-height: 3.75rem;
+  max-height: 3.75rem;
   height: 3.75rem;
 }
 
@@ -105,6 +109,10 @@
   position: absolute;
   width: 100%;
   border: 1px solid var(--border);
+}
+.mobile-search-bar .search-result ul li img {
+  width: 25px;
+  height: 25px;
 }
 
 .nav-links a {

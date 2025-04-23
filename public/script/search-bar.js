@@ -28,7 +28,7 @@ for (let i = 0; i < allSearchBars.length; i++) {
     });
 
     input.addEventListener('blur', () => {
-        searchContainer.classList.add('d-none');
+        container.classList.add('d-none');
     });
 
     function renderResults(products) {
@@ -43,15 +43,31 @@ for (let i = 0; i < allSearchBars.length; i++) {
     }
 
     function filterProductByName(text) {
-        const filtered = [];
+        const terms = text
+            .toLowerCase()
+            .trim()
+            .split(/\s+/);
 
-        for (let index = 0; index < allProducts.length; index++) {
-            const product = allProducts[index];
-            if (product.name.toLowerCase().includes(text.toLowerCase())) {
-                filtered.push(product);
+        const all = getProducts();
+        const out = [];
+
+        for (let i = 0; i < all.length; i++) {
+            const name = all[i].name.toLowerCase();
+            let matches = true;
+
+            for (let j = 0; j < terms.length; j++) {
+                if (!name.includes(terms[j])) {
+                    matches = false;
+                    break;
+                }
+            }
+
+            if (matches) {
+                out.push(all[i]);
             }
         }
-        return filtered;
+
+        return out;
     }
 
 }
