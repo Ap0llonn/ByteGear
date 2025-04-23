@@ -29,6 +29,7 @@
   background-color: var(--primary);
 }
 .search-bar .search-result {
+  z-index: 100;
   border-radius: 4px;
   transition: all 0.3s ease;
   position: absolute;
@@ -104,6 +105,7 @@
   font-size: 14px;
 }
 .mobile-search-bar .search-result {
+  z-index: 100;
   border-radius: 4px;
   transition: all 0.3s ease;
   position: absolute;
@@ -113,6 +115,35 @@
 .mobile-search-bar .search-result ul li img {
   width: 25px;
   height: 25px;
+}
+
+.basket-display {
+  position: absolute;
+  right: 10%;
+  width: 500px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background, white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+li:hover .basket-display {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.basket-display .up {
+  border-radius: 4px;
+  border-bottom: var(--border) solid 1px;
+}
+
+li {
+  position: relative;
 }
 
 .nav-btn span {

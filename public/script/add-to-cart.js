@@ -37,5 +37,4 @@ function handleProduct(e) {
         category: productCategory
     });
     localStorage.setItem('userBasket', JSON.stringify(basket));
-    console.log('Basket:', basket);
 }
