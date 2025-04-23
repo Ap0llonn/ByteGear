@@ -133,6 +133,19 @@
 }
 
 
+.nav-btn span {
+  display: inline-block;  
+  width: 24px;
+  height: 24px;
+  line-height: 24px;         
+  text-align: center;       
+  border-radius: 50%;
+  background: #007bff;
+  color: #fff;
+  font-size: 0.75rem;
+
+  vertical-align: middle;
+}
 
 .nav-links a {
     color: white;

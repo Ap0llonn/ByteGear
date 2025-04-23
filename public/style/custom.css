@@ -33,6 +33,14 @@
     background-color: var(--primary);
 }
 
+.b-secondary {
+    background-color: var(--secondary);
+}
+
+.b-accent {
+    background-color: var(--accent);
+}
+
 .b-white {
     background-color: white;
 }
