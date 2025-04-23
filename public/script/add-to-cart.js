@@ -2,12 +2,13 @@
 let nbItems = 0;
 const nbItemsElement = document.querySelector(".nb-items-in-cart");
 
+const basket = [];
+
 
 export function initAddToCart() {
 
 
     const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
-    console.log("Found add-to-cart buttons:", addToCartButtons.length);
     for (const button of addToCartButtons) {
         button.addEventListener('click', handleProduct);
 
@@ -28,5 +29,13 @@ function handleProduct(e) {
     const productCategory = productCard.dataset.productCategory;
     nbItems++;
     nbItemsElement.textContent = nbItems;
-    console.log('Product added to cart:', productName, productPrice, productImage, productDescription, productCategory);
+    basket.push({
+        name: productName,
+        price: productPrice,
+        image: productImage,
+        description: productDescription,
+        category: productCategory
+    });
+    localStorage.setItem('userBasket', JSON.stringify(basket));
+    console.log('Basket:', basket);
 }
