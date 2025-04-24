@@ -1,49 +1,50 @@
 export function productCardList(products) {
-    let html = '';
-    for (const product of products) {
-        html += productTemplate(product);
-    }
-    return html;
+  let html = '';
+  for (const product of products) {
+    html += productTemplate(product);
+  }
+  return html;
 }
 
 export function productCardListSearch(products) {
-    let html = '';
-    for (const product of products) {
-        html += searchProductTemplate(product);
-    }
-    return html;
+  let html = '';
+  for (const product of products) {
+    html += searchProductTemplate(product);
+  }
+  return html;
 }
 
-export function cartOverviewProductTemplate({ image, name, price, index }) {
-    return `
-      <li class="p-2 d-flex flex-row justify-content-between align-items-center gap-3">
-        <div class="d-flex flex-row justify-content-between align-items-center gap-3">
-          <div class="left">
-            <img src="${image}" alt="${name}" width="50">
-          </div>
-          <div class="middle">
-            <h5>${name}</h5>
-            <h5>${price} $</h5>
-          </div>
-        </div>
-  
-        <div class="right">
-          <button 
-            class="btn" 
-            data-delete-cart-product
-            data-index="${index}
-          >
-            <i class="bi bi-trash fs-4 b-primary">X</i>
-          </button>
-        </div>
-      </li>
+export function cartOverviewProductTemplate({ image, name, price, quantity, index }) {
+  return `
+      <li class="basket-item p-3 d-flex justify-content-between align-items-center gap-3">
+  <div class="d-flex align-items-center gap-3">
+    <div class="basket-img">
+      <img src="${image}" alt="${name}" width="60" height="60" class="rounded shadow-sm">
+    </div>
+    <div class="basket-info">
+      <h6 class="m-0 fw-semibold">${name}</h6>
+      <p class="m-0 fw-medium">${price} $</p>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-center gap-2">
+    <input data-index="${index}" type="number" class="form-control form-control-sm w-50 text-center" value="${quantity}" min="1" max="10" data-quantity-input>
+    <button 
+      class="btn btn-outline-danger p-1" 
+      data-delete-cart-product
+      data-index="${index}"
+    >
+      <i class="bi bi-trash fs-5"></i>
+    </button>
+  </div>
+</li>
     `;
 }
 
 
 export function searchProductTemplate(product) {
 
-    return `
+  return `
                     <li class="p-2" 
                     data-product-price="${product.price}"
                         data-product-name="${product.name}" 
@@ -63,7 +64,7 @@ export function searchProductTemplate(product) {
 
 export function productTemplate(product) {
 
-    return `
+  return `
                     <div class="product-card p-0" data-product-price="${product.price}"
                         data-product-name="${product.name}" 
                         data-product-description="${product.description}"

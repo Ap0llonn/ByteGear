@@ -137,45 +137,53 @@
 
 .basket-display {
     position: absolute;
-    right: 10%;
+    right: 1%;
     width: 500px;
     border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--background, white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: var(--background, #fff);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
 
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        visibility 0.3s ease;
+.basket-display up{
+    border-bottom: 1px solid var(--border);
 }
 
 li:hover .basket-display {
-
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-li:hover .no-basket-display {
-    opacity: 0;
-    visibility: hidden;
+.basket-item {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+    border-radius: 8px;
 }
 
-.basket-display .up {
-
-    border-radius: 4px;
-    border-bottom: var(--border) solid 1px;
+.basket-item:hover {
+    background-color: #f9f9f9;
 }
 
-li {
-    position: relative;
+.basket-img img {
+    object-fit: cover;
+    border-radius: 6px;
 }
 
+.basket-info h6 {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+.btn-outline-danger {
+    border-radius: 8px;
+}
 
 
 .nav-btn span {

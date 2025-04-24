@@ -18,6 +18,20 @@ export function initAddToCart() {
 
     }
 
+    addToCartContainer.addEventListener('input', e => {
+        const input = e.target.closest('[data-quantity-input]');
+        if (!input) return;
+
+        const index = parseInt(input.dataset.index);
+        const quantity = parseInt(input.value, 10);
+        if (isNaN(quantity) || quantity < 1) return;
+
+        basket[index].quantity = quantity;
+        subTotal = basket.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
+        nbItems = basket.reduce((acc, item) => acc + (item.quantity || 1), 0);
+        updateDisplay();
+    });
+
     addToCartContainer.addEventListener('click', e => {
         const btn = e.target.closest('[data-delete-cart-product]');
         if (!btn) return;
@@ -29,8 +43,8 @@ export function initAddToCart() {
         const [removed] = basket.splice(id, 1);
         localStorage.setItem('userBasket', JSON.stringify(basket));
 
-        nbItems--;
-        subTotal -= parseFloat(removed.price);
+        nbItems -= removed.quantity;
+        subTotal -= parseFloat(removed.price * removed.quantity);
         updateDisplay();
 
         renderResults();
@@ -38,6 +52,8 @@ export function initAddToCart() {
 }
 
 function updateDisplay() {
+
+
 
     for (const nbItemsElement of nbItemsElements) {
         nbItemsElement.textContent = nbItems;
@@ -53,7 +69,7 @@ function updateDisplay() {
 function handleProduct(e) {
     if (nbItems >= 0) {
         for (const nbItemsElement of nbItemsElements) {
-            nbItemsElement.classList.remove('d-none');
+            nbItemsElement.classList.remove("d-none");
         }
 
         addToCartContainer.classList.remove("no-basket-display");
@@ -69,12 +85,28 @@ function handleProduct(e) {
     const productDescription = productCard.dataset.productDescription;
     const productCategory = productCard.dataset.productCategory;
 
+
+    for (let index = 0; index < basket.length; index++) {
+        const p = basket[index];
+        if (p.name === productName) {
+            basket[index].quantity++;
+            nbItems++;
+            subTotal += parseFloat(productPrice);
+            updateDisplay();
+            renderResults();
+            localStorage.setItem('userBasket', JSON.stringify(basket));
+            return;
+        }
+
+    }
+
     basket.push({
         name: productName,
         price: productPrice,
         image: productImage,
         description: productDescription,
-        category: productCategory
+        category: productCategory,
+        quantity: 1
     });
 
     nbItems++;
@@ -95,7 +127,9 @@ function renderResults() {
             image: p.image,
             name: p.name,
             price: p.price,
+            quantity: p.quantity,
             index: i
+
         });
     }
 
