@@ -14,6 +14,33 @@ export function productCardListSearch(products) {
     return html;
 }
 
+export function cartOverviewProductTemplate({ image, name, price, index }) {
+    return `
+      <li class="p-2 d-flex flex-row justify-content-between align-items-center gap-3">
+        <div class="d-flex flex-row justify-content-between align-items-center gap-3">
+          <div class="left">
+            <img src="${image}" alt="${name}" width="50">
+          </div>
+          <div class="middle">
+            <h5>${name}</h5>
+            <h5>${price} $</h5>
+          </div>
+        </div>
+  
+        <div class="right">
+          <button 
+            class="btn" 
+            data-delete-cart-product
+            data-index="${index}
+          >
+            <i class="bi bi-trash fs-4 b-primary">X</i>
+          </button>
+        </div>
+      </li>
+    `;
+}
+
+
 export function searchProductTemplate(product) {
 
     return `
