@@ -42,4 +42,10 @@ footer .btn-link{
     padding: 0;
     margin: 0;
     font-size: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+footer .btn-link:hover{
+
+    color: #667182;
 }

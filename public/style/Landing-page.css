@@ -67,9 +67,16 @@
   width: 18.75rem;
 }
 
+.modal-footer {
+  flex-wrap: nowrap;
+}
+
 @media (max-width: 768px) {
   .category-card {
     width: 100%;
+  }
+  .modal-footer {
+    flex-wrap: wrap;
   }
   .why-us-card {
     width: 100%;
