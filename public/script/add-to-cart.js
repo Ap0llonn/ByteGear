@@ -53,8 +53,6 @@ export function initAddToCart() {
 
 function updateDisplay() {
 
-
-
     for (const nbItemsElement of nbItemsElements) {
         nbItemsElement.textContent = nbItems;
     }

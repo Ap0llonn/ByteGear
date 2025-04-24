@@ -34,4 +34,12 @@ footer .down{
 
 footer .down div, .down i{
     color: var(--text);
+    font-size: .75rem;
+}
+
+footer .btn-link{
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
 }

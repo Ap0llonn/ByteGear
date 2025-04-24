@@ -15,6 +15,7 @@
     <link rel="icon" href="./public/res/image/Logo/Logo.png">
 
     <script src="./public/script/search-bar.js" type="module"></script>
+    <script type="module" src="./public/script/cookie-consent.js"></script>
 </head>
 
 <body>
@@ -79,11 +80,7 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
-
-
         </nav>
         <nav class="b-primary container-fluid p-md-0 pt-2 p-4">
             <div class="container p-0">
@@ -181,7 +178,6 @@
                             <li><a href="#" class="text-white d-block py-1">Professionnelles</a></li>
                         </ul>
                     </li>
-
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseStorage" role="button" aria-expanded="false"
@@ -221,6 +217,34 @@
 
     </header>
     <main>
+
+        <div class="modal" tabindex="-1" id="cookieConsent">
+            <div class="modal-dialog modal-md | bottom-0 right-0">
+                <div class="modal-content">
+                    <div class="d-flex px-3 pt-3 align-items-center justify-content-between">
+                        <h5 class="modal-title">Consentement aux fichiers témoins (cookies)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Nous avons besoin de votre consentement pour recueillir certains fichiers témoins (cookies) afin d'amèliorer votre expèrience de navigation sur notre site. En cliquant sur 'Accepter tout', vous consentez à cette utilisation.
+                        </p>
+                        <p>
+                            Nous respectons votre vie privée, vous pouvez donc également gérer vos préférences à partir des paramètres en cliquant sur 'Personnaliser'.
+                        </p>
+                        <p>
+                            En tout temps, vous aurez la possibilité de modifier vos préférences en cliquant sur 'Gérer mes cookies' en bas de page.
+                        </p>
+                    </div>
+                    <div class="modal-footer d-flex flex-nowrap">
+                        <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Personnaliser</button>
+                        <button type="button" class="btn btn-primary w-100" data-cc-decline>Refuser tout</button>
+                        <button type="button" class="btn btn-primary w-100" data-cc-accept>Accepter tout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="b-light-border">
             <div
                 class="container mt-5 mb-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
@@ -483,7 +507,10 @@
             <div class="down">
                 <div class="d-flex flex-column flex-md-row justify-content-between gap-4 pt-1">
                     <div class="copyright text-body-light">© 2025 Samuel Courchesne. Tous droits réservés.</div>
-                    <div class="social-icons d-flex flex-row gap-3">
+                    <div class="social-icons d-flex flex-row gap-3 align-items-center">
+                        <button type="button" class="btn btn-link text-decoration-none text-body-light" data-bs-toggle="modal" data-bs-target="#cookieConsent">
+                            Gérer mes fichiers témoins (cookies)
+                        </button>
                         <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-twitter"></i></a>
                         <a href="#" class="text-decoration-none text-body-light"><i class="bi bi-instagram"></i></a>
