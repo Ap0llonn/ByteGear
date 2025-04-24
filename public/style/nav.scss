@@ -42,7 +42,7 @@
 
     .search-result {
         z-index: 100;
-        border-radius: 12px;
+        border-radius: 4px;
         transition: all 0.3s ease;
         position: absolute;
         width: 100%;
@@ -166,7 +166,6 @@ li:hover .basket-display {
 .basket-item {
     border-bottom: 1px solid #eee;
     transition: background-color 0.2s;
-    border-radius: 8px;
 }
 
 .basket-item:hover {

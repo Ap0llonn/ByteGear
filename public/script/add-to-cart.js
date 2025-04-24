@@ -134,7 +134,7 @@ function renderResults() {
     }
 
     addToCartContainer.innerHTML = `
-      <ul class="list-unstyled d-flex flex-column gap-2 m-0">
+      <ul class="list-unstyled d-flex flex-column m-0">
         ${itemsHTML}
       </ul>`;
 }
