@@ -161,6 +161,11 @@ li:hover .basket-display {
     transform: translateY(0);
 }
 
+li:hover .no-basket-display {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .basket-display .up {
 
     border-radius: 4px;

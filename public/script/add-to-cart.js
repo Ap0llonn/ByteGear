@@ -5,7 +5,7 @@ let subTotal = 0;
 let nbItems = 0;
 const basket = [];
 
-const nbItemsElement = document.querySelector(".nb-items-in-cart");
+const nbItemsElements = document.querySelectorAll(".nb-items-in-cart");
 const addToCartContainer = document.querySelector("[data-add-to-cart-container]");
 const subTotalElement = document.querySelector("[data-subtotal]");
 const totalItemElement = document.querySelector("[data-total-item]");
@@ -38,15 +38,26 @@ export function initAddToCart() {
 }
 
 function updateDisplay() {
-    nbItemsElement.textContent = nbItems;
+
+    for (const nbItemsElement of nbItemsElements) {
+        nbItemsElement.textContent = nbItems;
+    }
     totalItemElement.textContent = `${nbItems} article(s)`;
     subTotalElement.textContent = `${subTotal.toFixed(2)} $`;
-    nbItemsElement.classList.toggle('d-none', nbItems === 0);
+
+    for (const nbItemsElement of nbItemsElements) {
+        nbItemsElement.classList.toggle('d-none', nbItems === 0);
+    }
 }
 
 function handleProduct(e) {
     if (nbItems >= 0) {
-        nbItemsElement.classList.remove("d-none");
+        for (const nbItemsElement of nbItemsElements) {
+            nbItemsElement.classList.remove('d-none');
+        }
+
+        addToCartContainer.classList.remove("no-basket-display");
+
     }
     e.preventDefault();
 
