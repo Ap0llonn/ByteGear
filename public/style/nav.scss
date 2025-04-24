@@ -33,29 +33,23 @@
 
     }
 
-    .search-result {
-        z-index: 100;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-        position: absolute;
-        width: 100%;
-        border: 1px solid var(--border);
-    }
-
-    .search-result li {
-        height: 3.75rem;
-    }
-
-    .search-result li:hover {
-        background-color: var(--border);
-        color: var(--primary);
-    }
-
     @media (min-width: 768px) {
         .responsive-navbar {
             width: 100%;
             background-color: #FFFFFF;
         }
+    }
+
+    .search-result {
+        z-index: 100;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        position: absolute;
+        width: 100%;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+        overflow: hidden;
     }
 
     .search-result ul {
@@ -64,16 +58,25 @@
         margin: 0;
     }
 
-    .search-result ul li img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
+    .search-result li {
+        height: 3.75rem;
+        padding: 0.75rem 1rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        cursor: pointer;
     }
 
-    .search-result ul li {
-        min-height: 3.75rem;
-        max-height: 3.75rem;
-        height: 3.75rem;
+    .search-result li:hover {
+        background-color: var(--light);
+        color: var(--primary);
+    }
+
+    .search-result ul li img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #f8f9fa;
     }
 }
 
@@ -150,7 +153,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
-.basket-display up{
+.basket-display up {
     border-bottom: 1px solid var(--border);
 }
 
@@ -180,6 +183,22 @@ li:hover .basket-display {
     color: #333;
 }
 
+.basket-display .up{
+    border-bottom: 1px solid var(--border);
+}
+
+
+.basket-display .down{
+
+    border-top: 1px solid var(--border);
+}
+
+.basket-display .down a{
+    color: var(--primary);
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
 
 .btn-outline-danger {
     border-radius: 8px;

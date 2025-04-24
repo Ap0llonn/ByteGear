@@ -45,20 +45,20 @@ export function cartOverviewProductTemplate({ image, name, price, quantity, inde
 export function searchProductTemplate(product) {
 
   return `
-                    <li class="p-2" 
-                    data-product-price="${product.price}"
-                        data-product-name="${product.name}" 
-                        data-product-image="${product.image}"> 
-                           <a href="" class="d-flex justify-content-between align-items-center gap-3 text-decoration-none text-body-primary">
-                            <div class="left d-flex flex-row align-items-center gap-3">
-                                <img src="${product.image}" alt="" width="50px">
-                                <p class="m-0 fw-semibold">${product.name}</p>
-                            </div>
-                            <div class="right">
-                                <p class="m-0">${product.price} $</p>
-                            </div>
-                           </a>
-                        </li>
+                   <li class="search-item p-2" 
+    data-product-price="${product.price}"
+    data-product-name="${product.name}" 
+    data-product-image="${product.image}"> 
+    <a href="#" class="d-flex justify-content-between align-items-center gap-3 text-decoration-none text-reset">
+        <div class="left d-flex flex-row align-items-center gap-3">
+            <img src="${product.image}" alt="${product.name}" class="rounded shadow-sm">
+            <p class="m-0 fw-semibold">${product.name}</p>
+        </div>
+        <div class="right">
+            <p class="m-0 fw-bold">${product.price} $</p>
+        </div>
+    </a>
+</li>
     `;
 }
 
