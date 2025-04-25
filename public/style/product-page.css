@@ -1,0 +1,7 @@
+
+
+.filter-panel {
+    border: 1px solid var(--border);
+    width:  18.75rem;
+    max-width: 18.75rem;
+}

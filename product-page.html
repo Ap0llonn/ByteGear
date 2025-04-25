@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <link rel="stylesheet" href="./public/style/card.css">
     <link rel="stylesheet" href="./public/style/footer.css">
     <link rel="stylesheet" href="./public/style/nav.css">
+    <link rel="stylesheet" href="./public/style/product-page.css">
 </head>
+
 <body>
     <header class="p-0 position-sticky b-white top-0 z-3">
         <nav
@@ -182,13 +185,190 @@
 
     </header>
     <main>
+
+        <section class="b-light-border">
+            <div class="container pt-4">
+                <h2>Processeur</h2>
+            </div>
+        </section>
         <section>
-            <div class="container">
-                <div class="filter b-light-border">
-                  <div class="brand">
-                    
-                  </div>
+            <div class="container d-flex flex-row justify-content-between align-items-start gap-4 pt-5 pb-5">
+
+                <div class="left">
+                    <div
+                        class="filter-panel b-light d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+                        <div class="brand">
+                            <ul class="list-unstyled d-flex flex-column gap-2">
+                                <li>
+                                    <div class="up d-flex flex-row justify-content-between align-items-center">
+                                        <h5 class="text-body-primary fw-bold">Marque</h5>
+                                    </div>
+                                </li>
+
+                                <div class="down">
+                                    <ul class="list-unstyled ps-3">
+                                        <li class="d-flex flex-row justify-content-between align-items-center">
+                                            <input type="checkbox" id="intel" name="intel" value="Intel">
+                                            <label for="intel" class="text-body-primary d-block py-1">Intel</label>
+                                        </li>
+                                        <li class="d-flex flex-row justify-content-between align-items-center">
+                                            <input type="checkbox" id="intel" name="intel" value="Intel">
+                                            <label for="intel" class="text-body-primary d-block py-1">Intel</label>
+                                        </li>
+                                        <li class="d-flex flex-row justify-content-between align-items-center">
+                                            <input type="checkbox" id="intel" name="intel" value="Intel">
+                                            <label for="intel" class="text-body-primary d-block py-1">Intel</label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
                 </div>
+
+                <div class="right">
+
+                    <div class="product-list d-flex flex-row flex-wrap justify-content-between align-items-start gap-4">
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                            data-product-name="${product.name}" data-product-description="${product.description}"
+                            data-product-category="${product.category}" data-product-image="${product.image}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" class="" />
+                            </div>
+                            <div class="product-content justify-content-between d-flex flex-column p-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-category">${product.category}</span>
+                                    <span class="product-stock">En stock</span>
+                                </div>
+
+                                <h5 class="product-title mt-3">${product.name}</h5>
+                                <p class="product-description">${product.description}</p>
+                                <div
+                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-price fw-bold">${product.price} $</span>
+                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                            data-product-name="${product.name}" data-product-description="${product.description}"
+                            data-product-category="${product.category}" data-product-image="${product.image}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" class="" />
+                            </div>
+                            <div class="product-content justify-content-between d-flex flex-column p-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-category">${product.category}</span>
+                                    <span class="product-stock">En stock</span>
+                                </div>
+
+                                <h5 class="product-title mt-3">${product.name}</h5>
+                                <p class="product-description">${product.description}</p>
+                                <div
+                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-price fw-bold">${product.price} $</span>
+                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                            data-product-name="${product.name}" data-product-description="${product.description}"
+                            data-product-category="${product.category}" data-product-image="${product.image}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" class="" />
+                            </div>
+                            <div class="product-content justify-content-between d-flex flex-column p-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-category">${product.category}</span>
+                                    <span class="product-stock">En stock</span>
+                                </div>
+
+                                <h5 class="product-title mt-3">${product.name}</h5>
+                                <p class="product-description">${product.description}</p>
+                                <div
+                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-price fw-bold">${product.price} $</span>
+                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                            data-product-name="${product.name}" data-product-description="${product.description}"
+                            data-product-category="${product.category}" data-product-image="${product.image}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" class="" />
+                            </div>
+                            <div class="product-content justify-content-between d-flex flex-column p-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-category">${product.category}</span>
+                                    <span class="product-stock">En stock</span>
+                                </div>
+
+                                <h5 class="product-title mt-3">${product.name}</h5>
+                                <p class="product-description">${product.description}</p>
+                                <div
+                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-price fw-bold">${product.price} $</span>
+                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                            data-product-name="${product.name}" data-product-description="${product.description}"
+                            data-product-category="${product.category}" data-product-image="${product.image}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}" class="" />
+                            </div>
+                            <div class="product-content justify-content-between d-flex flex-column p-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-category">${product.category}</span>
+                                    <span class="product-stock">En stock</span>
+                                </div>
+
+                                <h5 class="product-title mt-3">${product.name}</h5>
+                                <p class="product-description">${product.description}</p>
+                                <div
+                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                    <span class="product-price fw-bold">${product.price} $</span>
+                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card p-0" data-product-price="${product.price}"
+                        data-product-name="${product.name}" data-product-description="${product.description}"
+                        data-product-category="${product.category}" data-product-image="${product.image}">
+                        <div class="product-img">
+                            <img src="${product.image}" alt="${product.name}" class="" />
+                        </div>
+                        <div class="product-content justify-content-between d-flex flex-column p-3">
+                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-category">${product.category}</span>
+                                <span class="product-stock">En stock</span>
+                            </div>
+
+                            <h5 class="product-title mt-3">${product.name}</h5>
+                            <p class="product-description">${product.description}</p>
+                            <div
+                                class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price fw-bold">${product.price} $</span>
+                                <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </section>
     </main>
@@ -198,9 +378,10 @@
             <div class="up d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
                 <div class="content">
                     <div class="title">
-                       <h5 class="text-white fw-bold">Information</h5>
+                        <h5 class="text-white fw-bold">Information</h5>
                     </div>
-                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                    <div
+                        class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
                         <ul class="list-unstyled d-flex flex-column gap-2">
                             <li><a href="" class="text-decoration-none text-body-light">Qui nous somme</a></li>
                             <li><a href="" class="text-decoration-none text-body-light">Carrière</a></li>
@@ -210,9 +391,10 @@
                 </div>
                 <div class="content">
                     <div class="title">
-                       <h5 class="text-white fw-bold">Produit</h5>
+                        <h5 class="text-white fw-bold">Produit</h5>
                     </div>
-                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                    <div
+                        class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
                         <ul class="list-unstyled d-flex flex-column gap-2">
                             <li><a href="" class="text-decoration-none text-body-light">Processeur</a></li>
                             <li><a href="" class="text-decoration-none text-body-light">Carte Graphique</a></li>
@@ -227,11 +409,13 @@
                 </div>
                 <div class="content">
                     <div class="title">
-                       <h5 class="text-white fw-bold">Compte</h5>
+                        <h5 class="text-white fw-bold">Compte</h5>
                     </div>
-                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
+                    <div
+                        class="content d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-4 mt-4">
                         <ul class="list-unstyled d-flex flex-column gap-2">
-                            <li><a href="" class="text-decoration-none text-body-light">Se connecter/Créer un compte</a></li>
+                            <li><a href="" class="text-decoration-none text-body-light">Se connecter/Créer un compte</a>
+                            </li>
                             <li><a href="" class="text-decoration-none text-body-light">Historique d'achat</a></li>
                             <li><a href="" class="text-decoration-none text-body-light">Retours de commande</a></li>
                             <li><a href="" class="text-decoration-none text-body-light">List de souhait</a></li>
@@ -241,13 +425,16 @@
                 </div>
                 <div class="content mb-4">
                     <div class="title">
-                       <h5 class="text-white fw-bold">Bulletin d'informations</h5>
+                        <h5 class="text-white fw-bold">Bulletin d'informations</h5>
                     </div>
-                    <div class="content d-flex flex-row flex-wrap justify-content-center justify-content-between gap-4 mt-4">
-                        <p class="text-body-light ">Inscrivez-vous à notre bulletin d'informations pour recevoir les dernières
+                    <div
+                        class="content d-flex flex-row flex-wrap justify-content-center justify-content-between gap-4 mt-4">
+                        <p class="text-body-light ">Inscrivez-vous à notre bulletin d'informations pour recevoir les
+                            dernières
                             nouvelles et offres spéciales.</p>
                         <form class="d-flex flex-column gap-1" role="search">
-                            <input class="newsletter-input" type="email" placeholder="Entrez votre email" aria-label="Search">
+                            <input class="newsletter-input" type="email" placeholder="Entrez votre email"
+                                aria-label="Search">
                             <button class="newsletter-btn" type="submit"><i class="bi bi-arrow-right"></i></button>
                         </form>
                     </div>
@@ -266,7 +453,8 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
