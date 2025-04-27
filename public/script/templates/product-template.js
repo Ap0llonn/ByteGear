@@ -14,6 +14,11 @@ export function productCardListSearch(products) {
   return html;
 }
 
+function removeMinus(category) {
+  return category.replaceAll('-', ' ');
+}
+
+
 export function cartOverviewProductTemplate({ image, name, price, quantity, index }) {
   return `
       <li class="basket-item p-3 d-flex justify-content-between align-items-center gap-3">
@@ -76,7 +81,7 @@ export function productTemplate(product) {
                         </div>
                         <div class="product-content justify-content-between d-flex flex-column p-3">
                             <div class="d-flex justify-content-between align-items-center gap-2">
-                                <span class="product-category">${product.category}</span>
+                                <span class="product-category">${removeMinus(product.category)}</span>
                                 <span class="product-stock">En stock</span>
                             </div>
                             

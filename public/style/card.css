@@ -85,11 +85,50 @@
 
 @media (max-width: 435px) {
     .product-card {
-        width: 100%;
-        font-size: 16px;
+        font-size: small;
     }
 
     .product-card h5{
-        font-size: 20px;
+        font-size: medium;
     }
 }
+
+@media (max-width: 380px) {
+    .product-card {
+      width: 48%; 
+      min-width: 140px; 
+      height: 30rem; 
+      font-size: 14px;
+    }
+  
+    .product-img {
+      flex: 0 0 100px;
+      padding: 0.5rem;
+    }
+  
+    .product-img img {
+      height: 80px;
+    }
+  
+    .product-content {
+      padding: 10px;
+    }
+  
+    .product-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .add-to-cart-btn {
+      width: 100%;
+      font-size: 13px;
+      padding: 6px 0;
+    }
+  
+    .product-stock {
+      font-size: 10px;
+      padding: 2px 4px;
+    }
+  }
+  

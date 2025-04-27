@@ -6,11 +6,6 @@ const recommendeProductContainer = document.querySelector('[data-recommende-prod
 
 
 
-export function initializeProduct() {
-
-    const products = getProducts();
-    container.innerHTML = productCardList(products);
-}
 
 export function initPopularProduct() {
    const products = getRandomProduct(4);
@@ -20,4 +15,8 @@ export function initPopularProduct() {
 export function initRecommendeProduct() {
     const products = getRandomProduct(4);
     recommendeProductContainer.innerHTML = productCardList(products);
- }
+}
+
+
+initPopularProduct();
+initRecommendeProduct();

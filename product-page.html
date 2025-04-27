@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./public/style/footer.css">
     <link rel="stylesheet" href="./public/style/nav.css">
     <link rel="stylesheet" href="./public/style/product-page.css">
+
+    <script src="./public/script/search-bar.js" type="module"></script>
 </head>
 
 <body>
@@ -25,14 +27,35 @@
             </div>
             <div class="search-bar d-none d-md-block">
                 <form class="d-flex" role="search">
-                    <input type="search" placeholder="Rechercher des produits..." aria-label="Search">
+                    <input type="search" placeholder="Rechercher des produits..." aria-label="Search" data-search-input>
                     <button type="submit">Rechercher</button>
                 </form>
+                <div class="b-light search-result d-none pb-3 " data-search-result-container>
+
+                </div>
             </div>
             <div class="nav-btn d-none d-md-block">
                 <ul class="list-unstyled d-flex align-items-center gap-5 m-0">
                     <li><a href="#" class="text-decoration-none text-body-primary fw-bold">Compte</a></li>
-                    <li><a href="#" class="text-decoration-none text-body-primary fw-bold">Panier</a></li>
+                    <li><a href="#" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
+                            <span class="b-accent nb-items-in-cart d-none">1</span>
+                        </a>
+                        <div class="basket-display b-light-border">
+                            <div class="up d-flex flex-row justify-content-between align-items-center p-3">
+                                <p class="fw-bold m-0" data-total-item>0 article(s)</p>
+                                <p class="fw-bold m-0" data-subtotal>Sous-total : 0$</p>
+                            </div>
+                            <div class="product-list" data-add-to-cart-container>
+
+                            </div>
+                            <div class="down">
+                                <ul class="list-unstyled d-flex flex-row justify-content-between gap-2 p-3">
+                                    <li><a href="#" class="text-decoration-none">Voir le panier</a></li>
+                                    <li><a href="#" class="text-decoration-none">Passer à la caisse</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -44,59 +67,72 @@
                         data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas">
                         <i class="bi bi-list fs-1"></i>
                     </button>
-                    <ul class="list-unstyled d-flex align-items-center gap-3 m-0">
+                    <ul class="nav-btn list-unstyled d-flex align-items-center gap-3 m-0">
                         <li><a href="#" class="text-white fs-5"><i class="bi bi-person-circle"></i></a></li>
-                        <li><a href="#" class="text-white fs-5"><i class="bi bi-bag"></i></a></li>
+                        <li><a href="#" class="text-white fs-5 text-decoration-none"><i class="bi bi-bag"></i>
+
+                                <span class="b-accent nb-items-in-cart d-none"></span>
+                            </a>
+
+                        </li>
                     </ul>
                 </div>
-
-
             </div>
-
-
         </nav>
         <nav class="b-primary container-fluid p-md-0 pt-2 p-4">
             <div class="container p-0">
                 <div class="mobile-search-bar d-md-none m-0 ">
                     <form class="d-flex" role="search">
-                        <input type="search" placeholder="Rechercher des produits..." aria-label="Search">
+                        <input type="search" placeholder="Rechercher des produits..." aria-label="Search"
+                            data-search-input>
                         <button type="submit"><i class="bi bi-search"></i></button>
                     </form>
+
+                    <div class="b-light search-result d-none pb-3 position-absolute w-100 "
+                        data-search-result-container>
+
+                    </div>
                 </div>
             </div>
             <div class="container d-none d-md-block p-0">
                 <ul class="nav-links list-unstyled d-flex align-items-center m-0">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
-                        <a href="#">Processeurs</a>
+                        <a href="product-page.html#processor" data-category="processor">Processeurs</a>
                         <div class="dropdown">
-                            <a href="#">Intel</a>
-                            <a href="#">AMD</a>
-                            <a href="#">Serveur</a>
+                            <a href="product-page.html#processor" data-category="processor"
+                                data-subcategory="intel">Intel</a>
+                            <a href="product-page.html#processor" data-category="processor"
+                                data-subcategory="amd">AMD</a>
+                            <a href="product-page.html#processor" data-category="processor"
+                                data-subcategory="server">Serveur</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Cartes graphiques</a>
+                        <a href="product-page.html#gpu" data-category="gpu">Cartes graphiques</a>
                         <div class="dropdown">
-                            <a href="#">NVIDIA GeForce</a>
-                            <a href="#">AMD Radeon</a>
-                            <a href="#">Professionnelles</a>
+                            <a href="product-page.html#gpu" data-category="gpu" data-subcategory="nvidia">NVIDIA
+                                GeForce</a>
+                            <a href="product-page.html#gpu" data-category="gpu" data-subcategory="amd">AMD Radeon</a>
+                            <a href="product-page.html#gpu" data-category="gpu"
+                                data-subcategory="pro">Professionnelles</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Stockage</a>
+                        <a href="product-page.html#storage" data-category="storage">Stockage</a>
                         <div class="dropdown">
-                            <a href="#">SSD</a>
-                            <a href="#">Disques durs</a>
-                            <a href="#">NAS</a>
+                            <a href="product-page.html#storage" data-category="storage" data-subcategory="ssd">SSD</a>
+                            <a href="product-page.html#storage" data-category="storage" data-subcategory="hdd">Disques
+                                durs</a>
+                            <a href="product-page.html#storage" data-category="storage" data-subcategory="nas">NAS</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Mémoire</a>
+                        <a href="product-page.html#memory" data-category="memory">Mémoire</a>
                         <div class="dropdown">
-                            <a href="#">DDR4</a>
-                            <a href="#">DDR5</a>
-                            <a href="#">ECC</a>
+                            <a href="product-page.html#memory" data-category="memory" data-subcategory="ddr4">DDR4</a>
+                            <a href="product-page.html#memory" data-category="memory" data-subcategory="ddr5">DDR5</a>
+                            <a href="product-page.html#memory" data-category="memory" data-subcategory="ecc">ECC</a>
                         </div>
                     </li>
                     <li><a href="#">Périphériques</a></li>
@@ -114,67 +150,129 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="list-unstyled nav-links">
-                    <li><a href="index.html" class="text-white text-decoration-none d-block py-2">Accueil</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block py-2">Accueil</a></li>
 
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseProcesseurs" role="button" aria-expanded="false"
-                            aria-controls="collapseProcesseurs">
+                            aria-controls="collapseProcesseurs" data-category="processor"
+                            href="product-page.html#processor">
                             Processeurs
                             <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
                                 data-bs-target="#collapseProcesseurs"></i>
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseProcesseurs">
-                            <li><a href="#" class="text-white d-block py-1">Intel</a></li>
-                            <li><a href="#" class="text-white d-block py-1">AMD</a></li>
-                            <li><a href="#" class="text-white d-block py-1">Serveur</a></li>
+                            <li>
+                                <a href="product-page.html#processor" class="text-white d-block py-1"
+                                    data-category="processor" data-subcategory="intel">
+                                    Intel
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#processor" class="text-white d-block py-1"
+                                    data-category="processor" data-subcategory="amd">
+                                    AMD
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#processor" class="text-white d-block py-1"
+                                    data-category="processor" data-subcategory="server">
+                                    Serveur
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseGPU" role="button" aria-expanded="false"
-                            aria-controls="collapseGPU">
+                            aria-controls="collapseGPU" data-category="gpu" href="product-page.html#gpu">
                             Cartes graphiques
                             <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
-                                data-bs-target="#collapseProcesseurs"></i>
+                                data-bs-target="#collapseGPU"></i>
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseGPU">
-                            <li><a href="#" class="text-white d-block py-1">NVIDIA GeForce</a></li>
-                            <li><a href="#" class="text-white d-block py-1">AMD Radeon</a></li>
-                            <li><a href="#" class="text-white d-block py-1">Professionnelles</a></li>
+                            <li>
+                                <a href="product-page.html#gpu" class="text-white d-block py-1" data-category="gpu"
+                                    data-subcategory="nvidia">
+                                    NVIDIA GeForce
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#gpu" class="text-white d-block py-1" data-category="gpu"
+                                    data-subcategory="amd">
+                                    AMD Radeon
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#gpu" class="text-white d-block py-1" data-category="gpu"
+                                    data-subcategory="pro">
+                                    Professionnelles
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseStorage" role="button" aria-expanded="false"
-                            aria-controls="collapseStorage">
+                            aria-controls="collapseStorage" data-category="storage" href="product-page.html#storage">
                             Stockage
                             <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
-                                data-bs-target="#collapseProcesseurs"></i>
+                                data-bs-target="#collapseStorage"></i>
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseStorage">
-                            <li><a href="#" class="text-white d-block py-1">SSD</a></li>
-                            <li><a href="#" class="text-white d-block py-1">Disques durs</a></li>
-                            <li><a href="#" class="text-white d-block py-1">NAS</a></li>
+                            <li>
+                                <a href="product-page.html#storage" class="text-white d-block py-1"
+                                    data-category="storage" data-subcategory="ssd">
+                                    SSD
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#storage" class="text-white d-block py-1"
+                                    data-category="storage" data-subcategory="hdd">
+                                    Disques durs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#storage" class="text-white d-block py-1"
+                                    data-category="storage" data-subcategory="nas">
+                                    NAS
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseMemory" role="button" aria-expanded="false"
-                            aria-controls="collapseMemory">
+                            aria-controls="collapseMemory" data-category="memory" href="product-page.html#memory">
                             Mémoire
                             <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
-                                data-bs-target="#collapseProcesseurs"></i>
+                                data-bs-target="#collapseMemory"></i>
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseMemory">
-                            <li><a href="#" class="text-white d-block py-1">DDR4</a></li>
-                            <li><a href="#" class="text-white d-block py-1">DDR5</a></li>
-                            <li><a href="#" class="text-white d-block py-1">ECC</a></li>
+                            <li>
+                                <a href="product-page.html#memory" class="text-white d-block py-1"
+                                    data-category="memory" data-subcategory="ddr4">
+                                    DDR4
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#memory" class="text-white d-block py-1"
+                                    data-category="memory" data-subcategory="ddr5">
+                                    DDR5
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-page.html#memory" class="text-white d-block py-1"
+                                    data-category="memory" data-subcategory="ecc">
+                                    ECC
+                                </a>
+                            </li>
                         </ul>
                     </li>
+
 
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Périphériques</a></li>
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Contact</a></li>
@@ -196,7 +294,7 @@
 
                 <div class="left">
                     <div
-                        class="filter-panel b-light d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+                        class="filter-panel d-none d-xxl-block b-light d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
                         <div class="brand">
                             <ul class="list-unstyled d-flex flex-column gap-2">
                                 <li>
@@ -231,138 +329,8 @@
 
                 <div class="right">
 
-                    <div class="product-list d-flex flex-row flex-wrap justify-content-between align-items-start gap-4">
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                            data-product-name="${product.name}" data-product-description="${product.description}"
-                            data-product-category="${product.category}" data-product-image="${product.image}">
-                            <div class="product-img">
-                                <img src="${product.image}" alt="${product.name}" class="" />
-                            </div>
-                            <div class="product-content justify-content-between d-flex flex-column p-3">
-                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-category">${product.category}</span>
-                                    <span class="product-stock">En stock</span>
-                                </div>
-
-                                <h5 class="product-title mt-3">${product.name}</h5>
-                                <p class="product-description">${product.description}</p>
-                                <div
-                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-price fw-bold">${product.price} $</span>
-                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                            data-product-name="${product.name}" data-product-description="${product.description}"
-                            data-product-category="${product.category}" data-product-image="${product.image}">
-                            <div class="product-img">
-                                <img src="${product.image}" alt="${product.name}" class="" />
-                            </div>
-                            <div class="product-content justify-content-between d-flex flex-column p-3">
-                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-category">${product.category}</span>
-                                    <span class="product-stock">En stock</span>
-                                </div>
-
-                                <h5 class="product-title mt-3">${product.name}</h5>
-                                <p class="product-description">${product.description}</p>
-                                <div
-                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-price fw-bold">${product.price} $</span>
-                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                            data-product-name="${product.name}" data-product-description="${product.description}"
-                            data-product-category="${product.category}" data-product-image="${product.image}">
-                            <div class="product-img">
-                                <img src="${product.image}" alt="${product.name}" class="" />
-                            </div>
-                            <div class="product-content justify-content-between d-flex flex-column p-3">
-                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-category">${product.category}</span>
-                                    <span class="product-stock">En stock</span>
-                                </div>
-
-                                <h5 class="product-title mt-3">${product.name}</h5>
-                                <p class="product-description">${product.description}</p>
-                                <div
-                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-price fw-bold">${product.price} $</span>
-                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                            data-product-name="${product.name}" data-product-description="${product.description}"
-                            data-product-category="${product.category}" data-product-image="${product.image}">
-                            <div class="product-img">
-                                <img src="${product.image}" alt="${product.name}" class="" />
-                            </div>
-                            <div class="product-content justify-content-between d-flex flex-column p-3">
-                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-category">${product.category}</span>
-                                    <span class="product-stock">En stock</span>
-                                </div>
-
-                                <h5 class="product-title mt-3">${product.name}</h5>
-                                <p class="product-description">${product.description}</p>
-                                <div
-                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-price fw-bold">${product.price} $</span>
-                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                            data-product-name="${product.name}" data-product-description="${product.description}"
-                            data-product-category="${product.category}" data-product-image="${product.image}">
-                            <div class="product-img">
-                                <img src="${product.image}" alt="${product.name}" class="" />
-                            </div>
-                            <div class="product-content justify-content-between d-flex flex-column p-3">
-                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-category">${product.category}</span>
-                                    <span class="product-stock">En stock</span>
-                                </div>
-
-                                <h5 class="product-title mt-3">${product.name}</h5>
-                                <p class="product-description">${product.description}</p>
-                                <div
-                                    class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                    <span class="product-price fw-bold">${product.price} $</span>
-                                    <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card p-0" data-product-price="${product.price}"
-                        data-product-name="${product.name}" data-product-description="${product.description}"
-                        data-product-category="${product.category}" data-product-image="${product.image}">
-                        <div class="product-img">
-                            <img src="${product.image}" alt="${product.name}" class="" />
-                        </div>
-                        <div class="product-content justify-content-between d-flex flex-column p-3">
-                            <div class="d-flex justify-content-between align-items-center gap-2">
-                                <span class="product-category">${product.category}</span>
-                                <span class="product-stock">En stock</span>
-                            </div>
-
-                            <h5 class="product-title mt-3">${product.name}</h5>
-                            <p class="product-description">${product.description}</p>
-                            <div
-                                class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
-                                <span class="product-price fw-bold">${product.price} $</span>
-                                <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="product-list d-flex flex-row flex-wrap justify-content-between align-items-start gap-4" data-product-container>
+                     
                     </div>
                 </div>
 
@@ -454,7 +422,9 @@
         </div>
     </footer>
 
+    <script src="./public/script/app.js" type="module"></script>
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/script/dynamic-product-page.js" type="module"></script>
 </body>
 
 </html>
