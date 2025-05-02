@@ -452,7 +452,197 @@ const products = [
     "brand": "MSI",
     "inStock": true,
     "image": "./public/res/image/product-image/gpu/msi-rtx-5090-suprimx.png"
-  }
+  },
+  {
+    "id": 46,
+    "name": "Seagate BarraCuda 2TB 7200RPM",
+    "price": 59.99,
+    "description": "Disque dur 3.5'' fiable pour le stockage général.",
+    "category": "stockage",
+    "brand": "Seagate",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/seagate-barracuda-2tb.png"
+  },
+  {
+    "id": 47,
+    "name": "Western Digital Blue 4TB 5400RPM",
+    "price": 84.99,
+    "description": "Stockage haute capacité pour les sauvegardes et médias.",
+    "category": "stockage",
+    "brand": "Western Digital",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/wd-blue-4tb.png"
+  },
+  {
+    "id": 48,
+    "name": "Toshiba P300 1TB 7200RPM",
+    "price": 47.99,
+    "description": "Disque dur performant pour PC de bureau.",
+    "category": "stockage",
+    "brand": "Toshiba",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/toshiba-p300-1tb.png"
+  },
+  {
+    "id": 49,
+    "name": "Samsung 870 EVO 1TB",
+    "price": 99.99,
+    "description": "SSD SATA très fiable pour une utilisation quotidienne.",
+    "category": "stockage",
+    "brand": "Samsung",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/samsung-870-evo-1tb.png"
+  },
+  {
+    "id": 50,
+    "name": "Crucial MX500 500GB",
+    "price": 54.99,
+    "description": "Excellent rapport qualité-prix pour booster un PC.",
+    "category": "stockage",
+    "brand": "Crucial",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/crucial-mx500-500gb.png"
+  },
+  {
+    "id": 51,
+    "name": "Kingston A400 240GB",
+    "price": 29.99,
+    "description": "SSD abordable pour les systèmes basiques.",
+    "category": "stockage",
+    "brand": "Kingston",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/kingston-a400-240gb.png"
+  },
+  {
+    "id": 52,
+    "name": "ADATA SU800 1TB",
+    "price": 89.99,
+    "description": "SSD performant avec support DRAM cache.",
+    "category": "stockage",
+    "brand": "ADATA",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/adata-su800-1tb.png"
+  },
+  {
+    "id": 53,
+    "name": "Samsung 980 PRO 1TB NVMe Gen4",
+    "price": 129.99,
+    "description": "SSD ultra rapide pour gamers et pros.",
+    "category": "stockage",
+    "brand": "Samsung",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/samsung-980pro-1tb.png"
+  },
+  {
+    "id": 54,
+    "name": "WD Black SN770 1TB Gen4",
+    "price": 114.99,
+    "description": "SSD gaming avec hautes vitesses de lecture/écriture.",
+    "category": "stockage",
+    "brand": "Western Digital",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/wd-sn770-1tb.png"
+  },
+  {
+    "id": 55,
+    "name": "Crucial P5 Plus 2TB Gen4",
+    "price": 169.99,
+    "description": "Stockage NVMe rapide avec chiffrement matériel.",
+    "category": "stockage",
+    "brand": "Crucial",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/crucial-p5plus-2tb.png"
+  },
+  {
+    "id": 56,
+    "name": "Kingston KC3000 1TB Gen4",
+    "price": 124.99,
+    "description": "SSD haute performance pour stations de travail.",
+    "category": "stockage",
+    "brand": "Kingston",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/kingston-kc3000-1tb.png"
+  },
+  {
+    "id": 57,
+    "name": "Sabrent Rocket Q 4TB Gen3",
+    "price": 279.99,
+    "description": "Haute capacité avec de bonnes performances NVMe.",
+    "category": "stockage",
+    "brand": "Sabrent",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/sabrent-rocketq-4tb.png"
+  },
+  {
+    "id": 58,
+    "name": "ADATA XPG GAMMIX S70 Blade 2TB",
+    "price": 159.99,
+    "description": "SSD Gen4 compatible PS5 avec dissipateur inclus.",
+    "category": "stockage",
+    "brand": "ADATA",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/xpg-s70-2tb.png"
+  },
+  {
+    "id": 59,
+    "name": "Corsair MP600 PRO XT 2TB",
+    "price": 189.99,
+    "description": "SSD NVMe Gen4 avec dissipateur thermique intégré.",
+    "category": "stockage",
+    "brand": "Corsair",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/corsair-mp600-xt-2tb.png"
+  },
+  {
+    "id": 60,
+    "name": "Gigabyte AORUS Gen4 7000s 1TB",
+    "price": 139.99,
+    "description": "SSD haut débit avec large dissipateur passif.",
+    "category": "stockage",
+    "brand": "Gigabyte",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/aorus-7000s-1tb.png"
+  },
+  {
+    "id": 61,
+    "name": "Lexar NM800 PRO 1TB Gen4",
+    "price": 119.99,
+    "description": "Excellent rapport prix/performances en PCIe 4.0.",
+    "category": "stockage",
+    "brand": "Lexar",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/lexar-nm800pro-1tb.png"
+  },
+  {
+    "id": 62,
+    "name": "Patriot Viper VP4300 2TB Gen4",
+    "price": 179.99,
+    "description": "SSD performant avec dissipateur en graphène.",
+    "category": "stockage",
+    "brand": "Patriot",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/patriot-vp4300-2tb.png"
+  },
+  {
+    "id": 63,
+    "name": "PNY CS900 1TB SATA SSD",
+    "price": 69.99,
+    "description": "Solution de mise à niveau simple et efficace.",
+    "category": "stockage",
+    "brand": "PNY",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/pny-cs900-1tb.png"
+  },
+  {
+    "id": 64,
+    "name": "TeamGroup MP34 512GB NVMe Gen3",
+    "price": 39.99,
+    "description": "Bon choix pour une configuration économique.",
+    "category": "stockage",
+    "brand": "TeamGroup",
+    "inStock": true,
+    "image": "./public/res/image/product-image/storage/teamgroup-mp34-512gb.png"
+  },
 
 ];
 

@@ -39,7 +39,7 @@
             <div class="nav-btn d-none d-md-block">
                 <ul class="list-unstyled d-flex align-items-center gap-5 m-0">
                     <li><a href="#" class="text-decoration-none text-body-primary fw-bold">Compte</a></li>
-                    <li><a href="#" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
+                    <li><a href="basket-review.html" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
                             <span class="b-accent nb-items-in-cart d-none">1</span>
                         </a>
                         <div class="basket-display b-light-border">
@@ -52,7 +52,7 @@
                             </div>
                             <div class="down">
                                 <ul class="list-unstyled d-flex flex-row justify-content-between gap-2 p-3">
-                                    <li><a href="#" class="text-decoration-none">Voir le panier</a></li>
+                                    <li><a href="basket-review.html" class="text-decoration-none">Voir le panier</a></li>
                                     <li><a href="#" class="text-decoration-none">Passer à la caisse</a></li>
                                 </ul>
                             </div>
@@ -125,12 +125,12 @@
                         </div>
                     </li>
                     <li>
-                        <a href="product-page.html#storage" data-category="storage">Stockage</a>
+                        <a href="product-page.html#stockage" data-category="stockage">Stockage</a>
                         <div class="dropdown">
-                            <a href="product-page.html#storage" data-category="storage" data-subcategory="ssd">SSD</a>
-                            <a href="product-page.html#storage" data-category="storage" data-subcategory="hdd">Disques
+                            <a href="product-page.html#stockage" data-category="stockage" data-subcategory="ssd">SSD</a>
+                            <a href="product-page.html#stockage" data-category="stockage" data-subcategory="hdd">Disques
                                 durs</a>
-                            <a href="product-page.html#storage" data-category="storage" data-subcategory="nas">NAS</a>
+                            <a href="product-page.html#stockage" data-category="stockage" data-subcategory="nas">NAS</a>
                         </div>
                     </li>
                     <li>
@@ -223,27 +223,27 @@
                     <li>
                         <a class="text-white text-decoration-none d-block py-2 d-flex justify-content-between"
                             data-bs-toggle="collapse" href="#collapseStorage" role="button" aria-expanded="false"
-                            aria-controls="collapseStorage" data-category="storage" href="product-page.html#storage">
+                            aria-controls="collapseStorage" data-category="storage" href="product-page.html#stockage">
                             Stockage
                             <i class="bi bi-chevron-down ms-2 transition rotate-icon" data-bs-toggle="collapse"
                                 data-bs-target="#collapseStorage"></i>
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseStorage">
                             <li>
-                                <a href="product-page.html#storage" class="text-white d-block py-1"
-                                    data-category="storage" data-subcategory="ssd">
+                                <a href="product-page.html#stockage" class="text-white d-block py-1"
+                                    data-category="stockage" data-subcategory="ssd">
                                     SSD
                                 </a>
                             </li>
                             <li>
-                                <a href="product-page.html#storage" class="text-white d-block py-1"
-                                    data-category="storage" data-subcategory="hdd">
+                                <a href="product-page.html#stockage" class="text-white d-block py-1"
+                                    data-category="stockage" data-subcategory="hdd">
                                     Disques durs
                                 </a>
                             </li>
                             <li>
-                                <a href="product-page.html#storage" class="text-white d-block py-1"
-                                    data-category="storage" data-subcategory="nas">
+                                <a href="product-page.html#stockage" class="text-white d-block py-1"
+                                    data-category="stockage" data-subcategory="nas">
                                     NAS
                                 </a>
                             </li>
@@ -321,11 +321,11 @@
 
         <section class="mb-5">
             <div class="container ">
-                <div class="row">
-                    <div class="product-list col-8 " data-cart-overview-container>
+                <div class="row flex-column flex-md-row justify-content-between">
+                    <div class="product-list col-12 col-md-7 p-0 " data-cart-overview-container>
                        
                     </div>
-                    <div class="basket-review col-4">
+                    <div class="basket-review col-12 col-md-4 ">
                         <div class="basket-review-header">
                             <h4>Résumé de votre commande</h4>
                         </div>
@@ -351,13 +351,13 @@
                                 </div>
                             </div>
                             
-                            <div class="promo-code-section">
+                            <div class="promo-code-section ">
                                 <div class="promo-header">
                                     <h5>Vous avez un code promo ?</h5>
                                 </div>
-                                <div class="promo-input-group">
+                                <div class="promo-input-group d-flex  flex-row flex-sm-column">
                                     <input type="text" class="promo-input" placeholder="Entrez votre code" aria-label="Code promo">
-                                    <button class="promo-button">Appliquer</button>
+                                    <button class="promo-button p-2">Appliquer</button>
                                 </div>
                             </div>
                             
