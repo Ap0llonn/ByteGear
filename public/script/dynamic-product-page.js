@@ -1,3 +1,4 @@
+import { initAddToCart, loadBasket } from "./add-to-cart.js";
 import { getProducts } from "./data/product.js";
 import { productCardList } from "./templates/product-template.js";
 
@@ -9,6 +10,7 @@ function init() {
     let hash = location.hash.replace('#', '');
     let category = hash === "" ? "all" : hash;
     render(category);
+    initAddToCart();
 }
 
 function render(category) {
@@ -35,3 +37,5 @@ function render(category) {
 }
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('hashchange', init);
+window.addEventListener('DOMContentLoaded', loadBasket);
+window.addEventListener('hashchange', loadBasket);

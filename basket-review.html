@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="./public/vendors/bootstrap-5.3.5-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./public/style/custom.css">
-    <link rel="stylesheet" href="./public/style/Landing-page.css">
-    <link rel="stylesheet" href="./public/style/card.css">
     <link rel="stylesheet" href="./public/style/footer.css">
     <link rel="stylesheet" href="./public/style/nav.css">
     <link rel="icon" href="./public/res/image/Logo/Logo.png">
+    <link rel="stylesheet" href="./public/style/basket-review.css">
 
     <script src="./public/script/search-bar.js" type="module"></script>
-
-    <script type="module" src="./public/script/cookie-consent.js"></script>
 
 </head>
 
@@ -42,7 +39,7 @@
             <div class="nav-btn d-none d-md-block">
                 <ul class="list-unstyled d-flex align-items-center gap-5 m-0">
                     <li><a href="#" class="text-decoration-none text-body-primary fw-bold">Compte</a></li>
-                    <li><a href="basket-review.html" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
+                    <li><a href="#" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
                             <span class="b-accent nb-items-in-cart d-none">1</span>
                         </a>
                         <div class="basket-display b-light-border">
@@ -55,7 +52,7 @@
                             </div>
                             <div class="down">
                                 <ul class="list-unstyled d-flex flex-row justify-content-between gap-2 p-3">
-                                    <li><a href="basket-review.html" class="text-decoration-none">Voir le panier</a></li>
+                                    <li><a href="#" class="text-decoration-none">Voir le panier</a></li>
                                     <li><a href="#" class="text-decoration-none">Passer à la caisse</a></li>
                                 </ul>
                             </div>
@@ -294,226 +291,89 @@
     </header>
     <main>
 
-        <div class="modal" tabindex="-1" id="cookieConsent">
-            <div class="modal-dialog modal-md | bottom-0 right-0">
-                <div class="modal-content">
-                    <div class="d-flex px-3 pt-3 align-items-center justify-content-between">
-                        <h5 class="modal-title">Consentement aux fichiers témoins (cookies)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Nous avons besoin de votre consentement pour recueillir certains fichiers témoins (cookies)
-                            afin d'amèliorer votre expèrience de navigation sur notre site. En cliquant sur 'Accepter
-                            tout', vous consentez à cette utilisation.
-                        </p>
-                        <p>
-                            Nous respectons votre vie privée, vous pouvez donc également gérer vos préférences à partir
-                            des paramètres en cliquant sur 'Personnaliser'.
-                        </p>
-                        <p>
-                            En tout temps, vous aurez la possibilité de modifier vos préférences en cliquant sur 'Gérer
-                            mes cookies' en bas de page.
-                        </p>
-                    </div>
-                    <div class="modal-footer d-flex flex-nowrap">
-                        <button type="button" class="btn btn-secondary w-100"
-                            data-bs-dismiss="modal">Personnaliser</button>
-                        <button type="button" class="btn btn-primary w-100" data-cc-decline>Refuser tout</button>
-                        <button type="button" class="btn btn-primary w-100" data-cc-accept>Accepter tout</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section class="b-light-border">
-            <div
-                class="container mt-5 mb-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
-                <div
-                    class="left d-flex flex-column justify-content-center text-center text-md-start align-items-center align-items-md-start gap-3">
-                    <div class="title">
-                        <h1 class="fw-bold text-body-primary">Composants informatiques de haute qualité</h1>
-                    </div>
-                    <div class="description">Des solutions matérielles fiables pour professionnels et particuliers
-                        exigeants. Livraison rapide et support technique dédié.</div>
-                    <div class="hero-btn d-flex gap-3 mt-4 align-items-center">
-                        <a href="#" class="btn btn-primary p-2 ps-4 pe-4 fw-semibold">Découvrer nous produit</a>
-                        <a href="#" class="btn btn-secondary p-2 ps-4 pe-4 fw-semibold">Acheter maintenant</a>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="./public/res/image/index-image/hero-img.png" alt="Composants informatiques"
-                        class="img-fluid">
-                </div>
-            </div>
-        </section>
-
-        <section class="b-light-border">
-            <div class="container mt-5 mb-5">
-                <div class="up d-flex flex-row justify-content-between align-items-center gap-4">
-                    <h4 class="text-body-primary fw-semibold">Catégories principal</h4>
-                    <a href="#" class="text-decoration-none text-end fs-6">voir toute les Catégories</a>
-                </div>
-                <div
-                    class="down d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-3 mt-4">
-                    <div class="category-card ">
-                        <i class="icon-container bi bi-cpu text-body-primary b-border fs-1 p-3 rounded-circle"></i>
-                        <h5 class="text-body-primary fw-semibold">Processeurs</h5>
-                        <p>Intel, Amd, Serveur</p>
-                    </div>
-                    <div class="category-card">
-                        <i class="icon-container bi bi-gpu-card text-body-primary b-border fs-1 p-3 rounded-circle"></i>
-                        <h5 class="text-body-primary fw-semibold">Carte Graphique</h5>
-                        <p>NVIDIA, AMD, Intel</p>
-                    </div>
-                    <div class="category-card">
-                        <i class="icon-container bi bi-memory text-body-primary b-border fs-1 p-3 rounded-circle"></i>
-                        <h5 class="text-body-primary fw-semibold">Mémoire</h5>
-                        <p>DDR5, DDR4</p>
-                    </div>
-                    <div class="category-card">
-                        <i
-                            class="icon-container bi bi-device-hdd text-body-primary b-border fs-1 p-3 rounded-circle"></i>
-                        <h5 class="text-body-primary fw-semibold">Stockage</h5>
-                        <p>HDD, SSD, NAS</p>
-                    </div>
-                    <div class="category-card">
-                        <i
-                            class="icon-container bi bi-motherboard text-body-primary b-border fs-1 p-3 rounded-circle"></i>
-                        <h5 class="text-body-primary fw-semibold">Carte mère</h5>
-                        <p>ATX, ITX</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-
         <section>
-            <div class="container mt-5 mb-5">
-                <div class="up d-flex flex-row justify-content-between align-items-center gap-4">
-                    <h4 class="text-body-primary fw-semibold">Produit Recommendé</h4>
-                    <a href="#" class="text-decoration-none text-end fs-6">Plus de produit</a>
-                </div>
-                <div class="down d-flex flex-row flex-wrap m-0 justify-content-between align-items-center gap-1 mt-4"
-                    data-popular-product-container>
-                </div>
-        </section>
+            <div class="time-line">
+                <div class="container py-5">
+                    <h2 class="text-center mb-5 text-body-primary">Panier</h2>
 
-        <section>
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                data-bs-interval="5000">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <picture>
-                            <source media="(max-width: 999px)"
-                                srcset="./public/res/image/index-image/carousel/slide-1-mobile.jpg">
-                            <img src="./public/res/image/index-image/carousel/slide-1.jpg" class="d-block w-100"
-                                alt="...">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 999px)"
-                                srcset="./public/res/image/index-image/carousel/slide-2-mobile.jpg">
-                            <img src="./public/res/image/index-image/carousel/slide-2.jpg" class="d-block w-100"
-                                alt="...">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 999px)"
-                                srcset="./public/res/image/index-image/carousel/slide-3-mobile.jpg">
-                            <img src="./public/res/image/index-image/carousel/slide-3.jpg" class="d-block w-100"
-                                alt="...">
-                        </picture>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-
-        <section>
-            <div class="container mt-5 mb-5">
-                <div class="up d-flex flex-row  align-items-center gap-4">
-                    <h4 class="text-body-primary fw-semibold">Produit Populaire</h4>
-                    <a href="#" class="text-decoration-none text-end fs-6">Plus de produit</a>
-                </div>
-                <div class="down d-flex flex-row flex-wrap m-0 justify-content-between align-items-center gap-2 mt-4"
-                    data-recommende-product-container>
-
-
-                </div>
-        </section>
-
-        <section class="b-light-border">
-            <div class="container mt-4 mb-5">
-                <div class="up">
-                    <h4>Pourquoi magasiner avec nous</h4>
-                </div>
-                <div
-                    class="down d-flex flex-row flex-wrap justify-content-center justify-content-sm-between align-items-center gap-2 mt-4">
-                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
-                        <div class="card-icon">
-                            <i class="bi bi-truck fs-1"></i>
+                    <div class="stepper">
+                        <div class="step active">
+                            <div class="circle">1</div>
+                            <div class="label">Shopping cart</div>
                         </div>
-                        <div class="card-content">
-                            <h5>Livraison rapide</h5>
-                            <p>Recevez vos produits rapidement grâce à notre service de livraison express.</p>
+                        <div class="step">
+                            <div class="circle">2</div>
+                            <div class="label">Checkout</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle">3</div>
+                            <div class="label">Review</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle">4</div>
+                            <div class="label">Confirmation</div>
                         </div>
                     </div>
-                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
-                        <div class="card-icon">
-                            <i class="bi bi-patch-check fs-1"></i>
-                        </div>
-                        <div class="card-content">
-                            <h5>Produit Certifié</h5>
-                            <p>Tous nos produits sont certifiés, garantis et proviennent de distributeurs officiels.</p>
-                        </div>
-                    </div>
-                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
-                        <div class="card-icon">
-                            <i class="bi bi-person-badge fs-1"></i>
-                        </div>
-                        <div class="card-content">
-                            <h5>Expertise Qualifié</h5>
-                            <p>Notre équipe d'experts est là pour vous conseiller et vous aider à choisir le bon
-                                produit.</p>
-                        </div>
-                    </div>
-                    <div class="card why-us-card d-flex flex-column gap-2 p-2 ps-3 pe-3 ">
-                        <div class="card-icon">
-                            <i class="bi bi-shield-shaded fs-1"></i>
-                        </div>
-                        <div class="card-content">
-                            <h5>Garantie Étendue</h5>
-                            <p>Profitez d'une garantie prolongée sur tous nos produits pour une tranquillité d'esprit.
-                            </p>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>
         </section>
 
+        <section class="mb-5">
+            <div class="container ">
+                <div class="row">
+                    <div class="product-list col-8 " data-cart-overview-container>
+                       
+                    </div>
+                    <div class="basket-review col-4">
+                        <div class="basket-review-header">
+                            <h4>Résumé de votre commande</h4>
+                        </div>
+                        
+                        <div class="basket-review-content">
+                            <div class="price-breakdown">
+                                <div class="price-row">
+                                    <p>Sous-total</p>
+                                    <p data-subtotal-cart-overview class="fw-bold"></p>
+                                </div>
+                                <div class="price-row">
+                                    <p>Frais de livraison</p>
+                                    <p data-shipping-cart-overview class="fw-bold"></p>
+                                </div>
+                                <div class="price-row">
+                                    <p>Taxes</p>
+                                    <p data-taxes-cart-overview class="fw-bold"></p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="price-row total">
+                                    <p>Total</p>
+                                    <p data-total-cart-overview class="fw-bold"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="promo-code-section">
+                                <div class="promo-header">
+                                    <h5>Vous avez un code promo ?</h5>
+                                </div>
+                                <div class="promo-input-group">
+                                    <input type="text" class="promo-input" placeholder="Entrez votre code" aria-label="Code promo">
+                                    <button class="promo-button">Appliquer</button>
+                                </div>
+                            </div>
+                            
+                            <div class="checkout-actions">
+                                <div class="secure-checkout">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>Paiement sécurisé</span>
+                                </div>
+                                <button class="checkout-button">Procéder au paiement</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="b-dark pt-5 pb-1">
@@ -599,11 +459,11 @@
                 </div>
             </div>
         </div>
-    </footer> 
-    <script src="./public/script/product-list.js" type="module"></script>
+    </footer>
     <script src="./public/script/app.js" type="module"></script>
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
-   
+    <script src="./public/script/cart-overview.js" type="module"></script>
+
 </body>
 
 </html>

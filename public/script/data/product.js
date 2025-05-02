@@ -193,7 +193,7 @@ const products = [
   {
     "id": 20,
     "name": "Intel Xeon Platinum 8380 2.3 GHz",
-    "price": 10999.99,
+    "price": 9999.99,
     "description": "Processeur serveur 40 cœurs/80 threads pour environnements critiques.",
     "category": "processeur",
     "brand": "Intel",
@@ -201,6 +201,7 @@ const products = [
     "image": "./public/res/image/product-image/processor/xeon-platinum-8380.png"
   },
 
+  // Carte Graphique
   {
     "id": 21,
     "name": "MSI GeForce RTX 4090 Suprim X 24G",
@@ -250,24 +251,223 @@ const products = [
     "brand": "Gigabyte",
     "inStock": true,
     "image": "./public/res/image/product-image/gpu/aor-rtx-4070-ti.png"
+  },
+
+  {
+    "id": 26,
+    "name": "MSI GeForce GTX 1050 Ti GAMING X 4G",
+    "price": 159.99,
+    "description": "Carte graphique compacte idéale pour le 1080p léger.",
+    "category": "carte-graphique",
+    "brand": "MSI",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/msi-gtx-1050-ti-gaming-x.png"
+  },
+  {
+    "id": 27,
+    "name": "Gigabyte GeForce GTX 1060 G1 Gaming 6G",
+    "price": 189.99,
+    "description": "GPU milieu de gamme fiable pour le 1080p.",
+    "category": "carte-graphique",
+    "brand": "Gigabyte",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/gigabyte-gtx-1060-g1.png"
+  },
+  {
+    "id": 28,
+    "name": "ASUS ROG Strix GeForce GTX 1070 Ti 8G",
+    "price": 229.99,
+    "description": "Bonne performance pour le 1080p élevé et le 1440p.",
+    "category": "carte-graphique",
+    "brand": "ASUS",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/asus-gtx-1070-ti-strix.png"
+  },
+  {
+    "id": 29,
+    "name": "EVGA GeForce GTX 1080 Ti FTW3 GAMING",
+    "price": 269.99,
+    "description": "Ancien haut de gamme toujours compétent en 1440p.",
+    "category": "carte-graphique",
+    "brand": "EVGA",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/evga-gtx-1080-ti-ftw3.png"
+  },
+  {
+    "id": 30,
+    "name": "ZOTAC GeForce RTX 2060 AMP 6G",
+    "price": 289.99,
+    "description": "Première carte RTX avec ray tracing d'entrée de gamme.",
+    "category": "carte-graphique",
+    "brand": "ZOTAC",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/zotac-rtx-2060-amp.png"
+  },
+  {
+    "id": 31,
+    "name": "MSI GeForce RTX 2070 SUPER GAMING X TRIO",
+    "price": 399.99,
+    "description": "GPU solide pour le 1440p fluide avec ray tracing.",
+    "category": "carte-graphique",
+    "brand": "MSI",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/msi-rtx-2070-super-gx.png"
+  },
+  {
+    "id": 32,
+    "name": "Gigabyte GeForce RTX 2080 WINDFORCE OC 8G",
+    "price": 499.99,
+    "description": "Bonne carte pour le gaming en 1440p ultra.",
+    "category": "carte-graphique",
+    "brand": "Gigabyte",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/gigabyte-rtx-2080-windforce.png"
+  },
+  {
+    "id": 33,
+    "name": "ASUS TUF Gaming GeForce RTX 3060 Ti OC",
+    "price": 429.99,
+    "description": "GPU efficace pour le 1440p avec refroidissement robuste.",
+    "category": "carte-graphique",
+    "brand": "ASUS",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/asus-rtx-3060-ti-tuf.png"
+  },
+  {
+    "id": 34,
+    "name": "MSI Ventus 3X GeForce RTX 3070 8G OC",
+    "price": 499.99,
+    "description": "GPU performant pour le 1440p et début de 4K.",
+    "category": "carte-graphique",
+    "brand": "MSI",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/msi-rtx-3070-ventus3x.png"
+  },
+  {
+    "id": 35,
+    "name": "Gigabyte AORUS GeForce RTX 3080 Master 10G",
+    "price": 649.99,
+    "description": "Puissance brute pour le 4K avec refroidissement avancé.",
+    "category": "carte-graphique",
+    "brand": "Gigabyte",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/aorus-rtx-3080-master.png"
+  },
+  {
+    "id": 36,
+    "name": "ASUS ROG Strix GeForce RTX 3090 OC 24G",
+    "price": 1399.99,
+    "description": "GPU extrême pour la 4K/8K, IA et création de contenu.",
+    "category": "carte-graphique",
+    "brand": "ASUS",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/asus-rtx-3090-strix.png"
+  },
+  {
+    "id": 37,
+    "name": "MSI Gaming X Trio GeForce RTX 4060 Ti 8G",
+    "price": 399.99,
+    "description": "Idéal pour 1080p ultra avec DLSS 3.",
+    "category": "carte-graphique",
+    "brand": "MSI",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/msi-rtx-4060ti-gxt.png"
+  },
+  {
+    "id": 38,
+    "name": "Gigabyte Gaming OC GeForce RTX 4070 12G",
+    "price": 599.99,
+    "description": "Excellente carte pour le 1440p fluide avec DLSS 3.",
+    "category": "carte-graphique",
+    "brand": "Gigabyte",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/gigabyte-rtx-4070-gaming.png"
+  },
+  {
+    "id": 39,
+    "name": "ZOTAC GeForce RTX 4080 Trinity OC 16G",
+    "price": 1199.99,
+    "description": "Parfaite pour le 4K ultra avec refroidissement silencieux.",
+    "category": "carte-graphique",
+    "brand": "ZOTAC",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/zotac-rtx-4080-trinity.png"
+  },
+  {
+    "id": 40,
+    "name": "ASUS ROG Strix GeForce RTX 4090 OC 24G",
+    "price": 1799.99,
+    "description": "Carte ultime pour 4K/8K, IA et rendu pro.",
+    "category": "carte-graphique",
+    "brand": "ASUS",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/asus-rtx-4090-strix.png"
+  },
+  {
+    "id": 41,
+    "name": "XFX Speedster QICK 319 Radeon RX 6700 XT 12G",
+    "price": 399.00,
+    "description": "GPU AMD parfait pour le 1440p sans compromis.",
+    "category": "carte-graphique",
+    "brand": "XFX",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/xfx-rx-6700xt.png"
+  },
+  {
+    "id": 42,
+    "name": "Sapphire Nitro+ Radeon RX 6800 XT 16G",
+    "price": 549.00,
+    "description": "Performance AMD pour 1440p et 4K compétitif.",
+    "category": "carte-graphique",
+    "brand": "Sapphire",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/sapphire-rx-6800xt-nitro.png"
+  },
+  {
+    "id": 43,
+    "name": "PowerColor Red Devil Radeon RX 7900 XT 20G",
+    "price": 749.00,
+    "description": "Carte haut de gamme AMD avec design custom agressif.",
+    "category": "carte-graphique",
+    "brand": "PowerColor",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/powercolor-rx-7900xt-reddevil.png"
+  },
+  {
+    "id": 44,
+    "name": "ASRock Phantom Gaming Radeon RX 7800 XT 16G",
+    "price": 549.00,
+    "description": "Bon équilibre pour le 1440p moderne avec RDNA 3.",
+    "category": "carte-graphique",
+    "brand": "ASRock",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/asrock-rx-7800xt-phantom.png"
+  },
+  {
+    "id": 45,
+    "name": "MSI GeForce RTX 5090 SUPRIM X 24G",
+    "price": 2099.99,
+    "description": "Futur GPU ultra-haut de gamme pour 4K/8K et IA avancée.",
+    "category": "carte-graphique",
+    "brand": "MSI",
+    "inStock": true,
+    "image": "./public/res/image/product-image/gpu/msi-rtx-5090-suprimx.png"
   }
-  
-  
- 
+
 ];
 
 export function getRandomProduct(numberOfProducts) {
 
-    let randomProducts = [];
+  let randomProducts = [];
 
-    for (let i = 0; i < numberOfProducts; i++) {
+  for (let i = 0; i < numberOfProducts; i++) {
     const randomIndex = Math.floor(Math.random() * products.length);
-        randomProducts[i] = products[randomIndex];
+    randomProducts[i] = products[randomIndex];
   }
 
   return randomProducts;
 }
 
 export function getProducts() {
-    return products;
+  return products;
 }

@@ -21,28 +21,28 @@ function removeMinus(category) {
 
 export function cartOverviewProductTemplate({ image, name, price, quantity, index }) {
   return `
-      <li class="basket-item p-3 d-flex justify-content-between align-items-center gap-3">
-  <div class="d-flex align-items-center gap-3">
-    <div class="basket-img">
-      <img src="${image}" alt="${name}" width="60" height="60" class="rounded shadow-sm">
-    </div>
-    <div class="basket-info">
-      <h6 class="m-0 fw-semibold">${name}</h6>
-      <p class="m-0 fw-medium">${price} $</p>
-    </div>
-  </div>
+          <li class="basket-item p-3 d-flex justify-content-between align-items-center gap-3">
+            <div class="basket-content d-flex align-items-center gap-3">
+              <div class="basket-img">
+                <img src="${image}" alt="${name}" width="60" height="60" class="rounded shadow-sm">
+              </div>
+              <div class="basket-info">
+                <h6 class="m-0 fw-semibold">${name}</h6>
+                <p class="m-0 fw-medium">${price} $</p>
+              </div>
+            </div>
 
-  <div class="d-flex align-items-center gap-2">
-    <input data-index="${index}" type="number" class="form-control form-control-sm w-50 text-center" value="${quantity}" min="1" max="10" data-quantity-input>
-    <button 
-      class="btn btn-outline-danger p-1" 
-      data-delete-cart-product
-      data-index="${index}"
-    >
-      <i class="bi bi-trash fs-5"></i>
-    </button>
-  </div>
-</li>
+            <div class="d-flex justify-content-between gap-2">
+              <input data-index="${index}" type="number" class="form-control form-control-sm w-50 text-center" value="${quantity}" min="1" max="10" data-quantity-input>
+              <button 
+                class="btn btn-outline-danger p-1" 
+                data-delete-cart-product
+                data-index="${index}"
+              >
+                <i class="bi bi-trash fs-5"></i>
+              </button>
+            </div>
+        </li>
     `;
 }
 
@@ -70,7 +70,8 @@ export function searchProductTemplate(product) {
 export function productTemplate(product) {
 
   return `
-                    <div class="product-card p-0 col-3 mb-3" data-product-price="${product.price}"
+  
+                    <div class="product-card p-0 mb-3" data-product-price="${product.price}"
                         data-product-name="${product.name}" 
                         data-product-description="${product.description}"
                         data-product-category="${product.category}"
