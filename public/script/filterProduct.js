@@ -1,4 +1,4 @@
-import { getProductByBrand, getProductPriceASC } from "./data/product.js";
+import { getProductByBrand, getProductPriceASC, getProductPriceRange } from "./data/product.js";
 import { getFilteredProducts } from "./dynamic-product-page.js";
 import { productCardList } from "./templates/product-template.js";
 
@@ -20,8 +20,9 @@ function initFilter() {
             const filterType = e.target.dataset.filter;
             const value = e.target.value;
 
+
             if (filterType === "brand") {
-                
+
                 for (const brand of brands) {
                     console.log("Brand selected:", value);
                     if (brand === value) {
@@ -32,7 +33,26 @@ function initFilter() {
             }
 
             if (filterType === "price") {
-                console.log("Price range selected:", value);
+
+                let min = 0;
+                let max = 0;
+
+                if (value.indexOf('-') !== -1) {
+                    const parts = value.split('-');
+                    for (let i = 0; i < parts.length; i++) {
+                        if (i === 0) min = parseInt(parts[i]);
+                        if (i === 1) max = parseInt(parts[i]);
+                    }
+                } else if (value.indexOf('+') !== -1) {
+                    min = parseInt(value);
+                    max = Infinity;
+                }
+
+                console.log("Min:", min, "Max:", max);
+                console.log("Price selected:", value);
+
+                filteredProducts = getProductPriceRange(products,min, max);
+                render(filteredProducts);
 
             }
 
@@ -45,7 +65,7 @@ function initFilter() {
 
 }
 
-function updarteBrandFilter(){
+function updarteBrandFilter() {
     const brandSelect = document.querySelector('select[data-filter="brand"]');
 
     if (!brandSelect) return;
@@ -65,8 +85,8 @@ function checkProductsBrand() {
     for (const product of products) {
         if (!brands.includes(product.brand)) {
             brands.push(product.brand);
-        }else {
-           
+        } else {
+
         }
     }
     return brands;
@@ -79,10 +99,10 @@ function handleSort(value, filteredProducts) {
     }
 
     if (value === "price-asc") {
-        filteredProducts = getProductPriceASC(products);
+        filteredProducts = getProductPriceASC(filteredProducts);
     }
     if (value === "price-desc") {
-        filteredProducts = getProductPriceASC(products).reverse();
+        filteredProducts = getProductPriceASC(filteredProducts).reverse();
     }
     if (value === "name-asc") {
         filteredProducts = products.sort((a, b) => a.name.localeCompare(b.name));

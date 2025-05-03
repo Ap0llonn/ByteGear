@@ -1013,7 +1013,7 @@ export function getRandomProduct(numberOfProducts) {
 }
 
 export function getProductPriceASC(products) {
-  let sortedProducts = [...products]; 
+  let sortedProducts = [...products];
 
   for (let i = 0; i < sortedProducts.length - 1; i++) {
     for (let j = 0; j < sortedProducts.length - 1 - i; j++) {
@@ -1022,6 +1022,20 @@ export function getProductPriceASC(products) {
         sortedProducts[j] = sortedProducts[j + 1];
         sortedProducts[j + 1] = temp;
       }
+    }
+  }
+
+  return sortedProducts;
+}
+
+
+export function getProductPriceRange(products, minPrice, maxPrice) {
+  let sortedProducts = [...products];
+
+  for (let i = 0; i < sortedProducts.length - 1; i++) {
+    if (sortedProducts[i].price < minPrice || sortedProducts[i].price > maxPrice) {
+      sortedProducts.splice(i, 1);
+      i--;
     }
   }
 
