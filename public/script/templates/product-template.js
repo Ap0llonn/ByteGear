@@ -83,17 +83,31 @@ export function productTemplate(product) {
                         <div class="product-content justify-content-between d-flex flex-column p-3">
                             <div class="d-flex justify-content-between align-items-center gap-2">
                                 <span class="product-category">${removeMinus(product.category)}</span>
-                                <span class="product-stock">En stock</span>
+                                ${setProductBadge(product.inStock)}
                             </div>
                             
                             <h5 class="product-title mt-3">${product.name}</h5>
                             <p class="product-description">${product.description}</p>
                             <div class="product-footer pt-3 d-flex justify-content-between align-items-center gap-2">
                                 <span class="product-price fw-bold">${product.price} $</span>
-                                <button class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
+                                <button ${setButtonDisable(product.inStock)} class="add-to-cart-btn p-1 ps-2 pe-2" data-add-to-cart>Ajouter</button>
                             </div>
                         </div>
                     </div>
     `;
 
+}
+
+function setButtonDisable(inStock) {
+  if (!inStock) {
+    return `disabled`;
+  }
+  return ``
+}
+
+function setProductBadge(isInStock) {
+  if (isInStock) {
+    return `<span class="product-stock">En stock</span>`;
+  }
+  return `<span class="product-out-of-stock">Rupture de stock</span>`;
 }

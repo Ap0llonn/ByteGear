@@ -447,7 +447,7 @@ const products = [
     "id": 45,
     "name": "MSI GeForce RTX 5090 SUPRIM X 24G",
     "price": 2099.99,
-    "description": "Futur GPU ultra-haut de gamme pour 4K/8K et IA avancée.",
+    "description": "GPU ultra-haut de gamme pour 4K/8K et IA avancée.",
     "category": "carte-graphique",
     "brand": "MSI",
     "inStock": true,
@@ -1040,6 +1040,18 @@ export function getProductPriceRange(products, minPrice, maxPrice) {
   }
 
   return sortedProducts;
+}
+
+export function getOutOfStockProducts(products) {
+  let outOfStockProducts = [];
+
+  for (const product of products) {
+    if (!product.inStock) {
+      outOfStockProducts.push(product);
+    }
+  }
+
+  return outOfStockProducts;
 }
 
 export function getProductByBrand(brand) {

@@ -1,4 +1,4 @@
-import { getProductByBrand, getProductPriceASC, getProductPriceRange } from "./data/product.js";
+import { getOutOfStockProducts, getProductByBrand, getProductPriceASC, getProductPriceRange, getProducts } from "./data/product.js";
 import { getFilteredProducts } from "./dynamic-product-page.js";
 import { productCardList } from "./templates/product-template.js";
 
@@ -8,61 +8,83 @@ const filters = document.querySelectorAll("select[data-filter]");
 
 let products = getFilteredProducts();
 
+
+let selectedBrand = null;
+let selectedPrice = null;
+let selectedSort = null;
+
 let brands = [];
 
 function initFilter() {
-    brands = [];
     checkProductsBrand();
     updarteBrandFilter();
+
     for (const filter of filters) {
         filter.addEventListener("change", (e) => {
-            let filteredProducts = [];
-            const filterType = e.target.dataset.filter;
+            const type = e.target.dataset.filter;
             const value = e.target.value;
 
+            if (type === "brand") selectedBrand = value;
+            if (type === "price") selectedPrice = value;
+            if (type === "sort") selectedSort = value;
 
-            if (filterType === "brand") {
-
-                for (const brand of brands) {
-                    console.log("Brand selected:", value);
-                    if (brand === value) {
-                        console.log("Brand selected:", brand);
-                        filteredProducts = getProductByBrand(brand);
-                    }
-                }
-            }
-
-            if (filterType === "price") {
-
-                let min = 0;
-                let max = 0;
-
-                if (value.indexOf('-') !== -1) {
-                    const parts = value.split('-');
-                    for (let i = 0; i < parts.length; i++) {
-                        if (i === 0) min = parseInt(parts[i]);
-                        if (i === 1) max = parseInt(parts[i]);
-                    }
-                } else if (value.indexOf('+') !== -1) {
-                    min = parseInt(value);
-                    max = Infinity;
-                }
-
-                console.log("Min:", min, "Max:", max);
-                console.log("Price selected:", value);
-
-                filteredProducts = getProductPriceRange(products,min, max);
-                render(filteredProducts);
-
-            }
-
-            if (filterType === "sort") {
-                filteredProducts = handleSort(value, filteredProducts);
-            }
-            render(filteredProducts);
+            applyAllFilters();
         });
     }
 
+}
+
+function applyAllFilters() {
+    let result = [...products];
+
+    result = getOutOfStockProducts(result);
+
+    result = handleBrandSort(result);
+
+    result = handlePriceSort(result);
+
+    result = handleSort(result);
+
+    render(result);
+}
+
+
+function handleBrandSort(result) {
+    if (selectedBrand) {
+        for (const product of result) {
+            if (product.brand === selectedBrand) {
+                result = getProductByBrand(product.brand);
+            }
+
+        }
+    }
+    return result;
+}
+
+function handlePriceSort(result) {
+    if (selectedPrice) {
+        let min = 0, max = Infinity;
+        if (selectedPrice.includes("-")) {
+            [min, max] = selectedPrice.split("-").map(Number);
+        } else if (selectedPrice.includes("+")) {
+            min = parseInt(selectedPrice);
+        }
+        result = result.filter(p => p.price >= min && p.price <= max);
+    }
+    return result;
+}
+
+function handleSort(result) {
+    if (selectedSort === "price-asc") {
+        result = getProductPriceASC(result);
+    } else if (selectedSort === "price-desc") {
+        result = getProductPriceASC(result).reverse();
+    } else if (selectedSort === "name-asc") {
+        result.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (selectedSort === "name-desc") {
+        result.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    return result;
 }
 
 function updarteBrandFilter() {
@@ -86,32 +108,14 @@ function checkProductsBrand() {
         if (!brands.includes(product.brand)) {
             brands.push(product.brand);
         } else {
-
+            console.log("Brand already exists: " + product.brand);
         }
     }
     return brands;
 
 }
 
-function handleSort(value, filteredProducts) {
-    if (value === "all") {
-        filteredProducts = products;
-    }
 
-    if (value === "price-asc") {
-        filteredProducts = getProductPriceASC(filteredProducts);
-    }
-    if (value === "price-desc") {
-        filteredProducts = getProductPriceASC(filteredProducts).reverse();
-    }
-    if (value === "name-asc") {
-        filteredProducts = products.sort((a, b) => a.name.localeCompare(b.name));
-    }
-    if (value === "name-desc") {
-        filteredProducts = products.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    return filteredProducts;
-}
 
 function render(filteredProducts) {
     let html = productCardList(filteredProducts);

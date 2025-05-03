@@ -59,6 +59,15 @@
     color: var(--accent);
 }
 
+.product-out-of-stock {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: #d86972be;
+    color: var(--light);
+}
+
+
 .add-to-cart-btn {
     background-color: var(--primary);
     color: white;

@@ -1,10 +1,9 @@
-/* Styles pour la section de filtres */
+
 .filter-section {
     background-color: #f8f9fa;
     border-color: #dee2e6;
 }
 
-/* Style pour les boutons de filtre */
 .filter-options .btn-outline-secondary {
     border-color: #ced4da;
     color: #495057;
@@ -20,7 +19,6 @@
     border-color: #adb5bd;
 }
 
-/* Style pour les menus déroulants */
 .dropdown-menu {
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -39,7 +37,6 @@
     background-color: #f1f3f5;
 }
 
-/* Style pour le slider de prix */
 .price-range-slider {
     width: 100%;
     padding: 0 0.5rem;
@@ -53,7 +50,6 @@
     background-color: #0d6efd;
 }
 
-/* Style pour le bouton Appliquer */
 .btn-primary {
     background-color: #0d6efd;
     border-color: #0d6efd;
@@ -64,7 +60,6 @@
     border-color: #0a58ca;
 }
 
-/* Style pour le select de tri */
 .sort-options .form-select {
     border-color: #ced4da;
     color: #495057;
@@ -75,7 +70,6 @@
     min-width: 180px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .filter-options {
         overflow-x: auto;
@@ -96,7 +90,6 @@
     }
 }
 
-/* Styles pour les cases à cocher dans les menus déroulants */
 .form-check-input {
     width: 1rem;
     height: 1rem;
@@ -111,7 +104,6 @@
     border-color: #0d6efd;
 }
 
-/* Animation pour les dropdown */
 .dropdown-menu {
     transform-origin: top;
     animation: dropdown-anim 0.2s ease;
@@ -128,14 +120,13 @@
     }
 }
 
-/* Style pour le titre des filtres */
+
 .filter-title h5 {
     color: #495057;
     font-weight: 500;
     font-size: 1rem;
 }
 
-/* Style pour les badges de filtres actifs */
 .active-filters {
     display: flex;
     flex-wrap: wrap;
