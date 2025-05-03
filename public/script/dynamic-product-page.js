@@ -2,8 +2,8 @@ import { initAddToCart, loadBasket } from "./add-to-cart.js";
 import { getProducts } from "./data/product.js";
 import { productCardList } from "./templates/product-template.js";
 
-let products = getProducts();
-let container = document.querySelector("[data-product-container]");
+const products = getProducts();
+const container = document.querySelector("[data-product-container]");
 
 function init() {
 
@@ -34,6 +34,13 @@ function render(category) {
     let html = productCardList(filteredProducts);
     container.innerHTML = html;
 }
+
+export function getFilteredProducts() {
+    let hash = location.hash.replace('#', '');
+    let category = hash === "" ? "all" : hash;
+    return products.filter(product => product.category === category);
+}
+
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('hashchange', init);
 window.addEventListener('DOMContentLoaded', loadBasket);

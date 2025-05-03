@@ -71,7 +71,7 @@ export function productTemplate(product) {
 
   return `
   
-                    <div class="product-card p-0 mb-3" data-product-price="${product.price}"
+                    <div class="product-card p-0 mb-3 mb-sm-0" data-product-price="${product.price}"
                         data-product-name="${product.name}" 
                         data-product-description="${product.description}"
                         data-product-category="${product.category}"

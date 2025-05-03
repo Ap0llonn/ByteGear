@@ -350,8 +350,8 @@
                     
 
                     <div class="col-md-2">
-                        <select class="form-select">
-                            <option selected>Trier par</option>
+                        <select class="form-select" data-filter="sort">
+                            <option value="all" selected>Trier par</option>
                             <option value="price-asc">Prix: croissant</option>
                             <option value="price-desc">Prix: décroissant</option>
                             <option value="name-asc">Nom: A-Z</option>
@@ -367,7 +367,7 @@
 
                 <div class="right">
 
-                    <div class="product-list row d-flex flex-row flex-wrap justify-content-between align-items-center gap-1"
+                    <div class="product-list row d-flex flex-row flex-wrap justify-content-between justify-content-sm-start align-items-center gap-1 gap-sm-3"
                         data-product-container>
 
                     </div>

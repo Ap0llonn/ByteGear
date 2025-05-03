@@ -1012,6 +1012,22 @@ export function getRandomProduct(numberOfProducts) {
   return randomProducts;
 }
 
+export function getProductPriceASC(products) {
+  let sortedProducts = [...products]; 
+
+  for (let i = 0; i < sortedProducts.length - 1; i++) {
+    for (let j = 0; j < sortedProducts.length - 1 - i; j++) {
+      if (sortedProducts[j].price > sortedProducts[j + 1].price) {
+        const temp = sortedProducts[j];
+        sortedProducts[j] = sortedProducts[j + 1];
+        sortedProducts[j + 1] = temp;
+      }
+    }
+  }
+
+  return sortedProducts;
+}
+
 export function getProductByBrand(brand) {
 
   let filteredProducts = [];
