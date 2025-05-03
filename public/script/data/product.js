@@ -845,6 +845,158 @@ const products = [
     "brand": "Micron",
     "inStock": true,
     "image": "./public/res/image/product-image/ram/micron-ecc-ddr5-5600.png"
+  },
+
+  // Périphériques
+  {
+    "id": 85,
+    "name": "Logitech G502 Hero",
+    "price": 261.79,
+    "description": "Souris gaming avec capteur haute précision.",
+    "category": "peripherique",
+    "brand": "Logitech",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/logitech-g502.png"
+  },
+  {
+    "id": 86,
+    "name": "Razer DeathAdder V2",
+    "price": 299.34,
+    "description": "Souris gaming avec capteur haute précision.",
+    "category": "peripherique",
+    "brand": "Razer",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/razer-deathadder-v2.png"
+  },
+  {
+    "id": 87,
+    "name": "Corsair Harpoon RGB",
+    "price": 69.05,
+    "description": "Souris gaming avec capteur haute précision.",
+    "category": "peripherique",
+    "brand": "Corsair",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/corsair-harpoon.png"
+  },
+  {
+    "id": 88,
+    "name": "SteelSeries Rival 5",
+    "price": 180.48,
+    "description": "Souris gaming avec capteur haute précision.",
+    "category": "peripherique",
+    "brand": "SteelSeries",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/steelseries-rival5.png"
+  },
+  {
+    "id": 89,
+    "name": "Glorious Model O",
+    "price": 42.09,
+    "description": "Souris gaming avec capteur haute précision.",
+    "category": "peripherique",
+    "brand": "Glorious",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/glorious-model-o.png"
+  },
+  {
+    "id": 90,
+    "name": "Corsair K95 RGB Platinum",
+    "price": 138.22,
+    "description": "Clavier mécanique rétroéclairé pour gamers.",
+    "category": "peripherique",
+    "brand": "Corsair",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/corsair-k95.png"
+  },
+  {
+    "id": 91,
+    "name": "Logitech G915 TKL",
+    "price": 98.63,
+    "description": "Clavier mécanique rétroéclairé pour gamers.",
+    "category": "peripherique",
+    "brand": "Logitech",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/logitech-g915.png"
+  },
+  {
+    "id": 92,
+    "name": "Razer Huntsman Mini",
+    "price": 158.91,
+    "description": "Clavier mécanique rétroéclairé pour gamers.",
+    "category": "peripherique",
+    "brand": "Razer",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/razer-huntsman.png"
+  },
+  {
+    "id": 93,
+    "name": "Ducky One 2 Mini",
+    "price": 172.66,
+    "description": "Clavier mécanique rétroéclairé pour gamers.",
+    "category": "peripherique",
+    "brand": "Ducky",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/ducky-one2mini.png"
+  },
+  {
+    "id": 94,
+    "name": "HyperX Alloy FPS",
+    "price": 104.78,
+    "description": "Clavier mécanique rétroéclairé pour gamers.",
+    "category": "peripherique",
+    "brand": "HyperX",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/hyperx-alloyfps.png"
+  },
+  {
+    "id": 95,
+    "name": "ASUS TUF VG27AQ",
+    "price": 290.99,
+    "description": "Écran haute résolution pour une immersion totale.",
+    "category": "peripherique",
+    "brand": "ASUS",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/asus-vg27aq.png"
+  },
+  {
+    "id": 96,
+    "name": "Acer Predator XB271HU",
+    "price": 286.74,
+    "description": "Écran haute résolution pour une immersion totale.",
+    "category": "peripherique",
+    "brand": "Acer",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/acer-xb271hu.png"
+  },
+  {
+    "id": 97,
+    "name": "Dell UltraSharp U2723QE",
+    "price": 237.61,
+    "description": "Écran haute résolution pour une immersion totale.",
+    "category": "peripherique",
+    "brand": "Dell",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/dell-u2723qe.png"
+  },
+  {
+    "id": 98,
+    "name": "LG UltraGear 27GP850-B",
+    "price": 142.31,
+    "description": "Écran haute résolution pour une immersion totale.",
+    "category": "peripherique",
+    "brand": "LG",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/lg-27gp850b.png"
+  },
+  {
+    "id": 99,
+    "name": "Samsung Odyssey G7",
+    "price": 106.87,
+    "description": "Écran haute résolution pour une immersion totale.",
+    "category": "peripherique",
+    "brand": "Samsung",
+    "inStock": true,
+    "image": "./public/res/image/product-image/peripherals/samsung-g7.png"
   }
 ];
 
