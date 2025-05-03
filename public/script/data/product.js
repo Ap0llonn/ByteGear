@@ -643,7 +643,209 @@ const products = [
     "inStock": true,
     "image": "./public/res/image/product-image/storage/teamgroup-mp34-512gb.png"
   },
+  // RAM
+  {
+    "id": 65,
+    "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4 3200MHz",
+    "price": 54.99,
+    "description": "RAM performante et fiable pour gamers et créateurs.",
+    "category": "ram",
+    "brand": "Corsair",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/corsair-vengeance-ddr4-3200.png"
+  },
+  {
+    "id": 66,
+    "name": "G.Skill Ripjaws V 32GB (2x16GB) DDR4 3600MHz",
+    "price": 84.99,
+    "description": "Excellente performance pour les tâches exigeantes.",
+    "category": "ram",
+    "brand": "G.Skill",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/gskill-ripjaws-ddr4-3600.png"
+  },
+  {
+    "id": 67,
+    "name": "Kingston HyperX Fury 16GB (1x16GB) DDR4 2666MHz",
+    "price": 42.99,
+    "description": "Bon choix pour les configurations économiques.",
+    "category": "ram",
+    "brand": "Kingston",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/kingston-hyperx-ddr4-2666.png"
+  },
+  {
+    "id": 68,
+    "name": "Patriot Viper 4 16GB (2x8GB) DDR4 3000MHz",
+    "price": 49.99,
+    "description": "Mémoire fiable avec dissipateur thermique.",
+    "category": "ram",
+    "brand": "Patriot",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/patriot-viper-ddr4-3000.png"
+  },
+  {
+    "id": 69,
+    "name": "Team T-Force Delta RGB 32GB (2x16GB) DDR4 3200MHz",
+    "price": 74.99,
+    "description": "RGB stylé avec bonnes performances.",
+    "category": "ram",
+    "brand": "TeamGroup",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/teamgroup-delta-ddr4-3200.png"
+  },
+  {
+    "id": 70,
+    "name": "ADATA XPG Gammix D10 16GB DDR4 3200MHz",
+    "price": 44.99,
+    "description": "Conçu pour les gamers au budget serré.",
+    "category": "ram",
+    "brand": "ADATA",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/adata-gammix-ddr4-3200.png"
+  },
+  {
+    "id": 71,
+    "name": "Silicon Power 8GB DDR4 2400MHz",
+    "price": 24.99,
+    "description": "Barrette simple pour usage bureautique.",
+    "category": "ram",
+    "brand": "Silicon Power",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/siliconpower-ddr4-2400.png"
+  },
+  {
+    "id": 72,
+    "name": "Crucial Ballistix 16GB (2x8GB) DDR4 3200MHz",
+    "price": 59.99,
+    "description": "Idéal pour jeux et multitâche.",
+    "category": "ram",
+    "brand": "Crucial",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/crucial-ballistix-ddr4-3200.png"
+  },
 
+  {
+    "id": 73,
+    "name": "Corsair Dominator Platinum RGB 32GB DDR5 6000MHz",
+    "price": 169.99,
+    "description": "RAM haut de gamme avec RGB et haute fréquence.",
+    "category": "ram",
+    "brand": "Corsair",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/corsair-dominator-ddr5-6000.png"
+  },
+  {
+    "id": 74,
+    "name": "Kingston Fury Beast 32GB (2x16GB) DDR5 5600MHz",
+    "price": 119.99,
+    "description": "RAM DDR5 rapide pour les PC récents.",
+    "category": "ram",
+    "brand": "Kingston",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/kingston-fury-ddr5-5600.png"
+  },
+  {
+    "id": 75,
+    "name": "ADATA XPG Lancer 32GB DDR5 6000MHz",
+    "price": 129.99,
+    "description": "Mémoire DDR5 performante pour les gamers.",
+    "category": "ram",
+    "brand": "ADATA",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/adata-lancer-ddr5-6000.png"
+  },
+  {
+    "id": 76,
+    "name": "G.Skill Trident Z5 RGB 32GB DDR5 6400MHz",
+    "price": 189.99,
+    "description": "Ultra haute fréquence avec éclairage RGB.",
+    "category": "ram",
+    "brand": "G.Skill",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/gskill-tridentz-ddr5-6400.png"
+  },
+  {
+    "id": 77,
+    "name": "Patriot Viper Venom 32GB DDR5 5600MHz",
+    "price": 109.99,
+    "description": "Compatible avec les cartes mères DDR5.",
+    "category": "ram",
+    "brand": "Patriot",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/patriot-venom-ddr5-5600.png"
+  },
+  {
+    "id": 78,
+    "name": "PNY XLR8 Gaming 32GB DDR5 6000MHz",
+    "price": 119.99,
+    "description": "Solution gaming DDR5 performante.",
+    "category": "ram",
+    "brand": "PNY",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/pny-xlr8-ddr5-6000.png"
+  },
+  {
+    "id": 79,
+    "name": "Lexar ARES 32GB (2x16GB) DDR5 6000MHz",
+    "price": 124.99,
+    "description": "Design épuré, haute performance.",
+    "category": "ram",
+    "brand": "Lexar",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/lexar-ares-ddr5-6000.png"
+  },
+  {
+    "id": 80,
+    "name": "TeamGroup T-Force Delta RGB DDR5 6400MHz",
+    "price": 144.99,
+    "description": "RGB stylé avec haute fréquence DDR5.",
+    "category": "ram",
+    "brand": "TeamGroup",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/teamgroup-delta-ddr5-6400.png"
+  },
+
+  {
+    "id": 81,
+    "name": "Crucial ECC Registered 32GB DDR4 2666MHz",
+    "price": 114.99,
+    "description": "RAM ECC pour serveurs et stations de travail.",
+    "category": "ram",
+    "brand": "Crucial",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/crucial-ecc-ddr4-2666.png"
+  },
+  {
+    "id": 82,
+    "name": "Samsung 16GB DDR5 ECC Registered 4800MHz",
+    "price": 139.99,
+    "description": "Module ECC DDR5 fiable pour les systèmes critiques.",
+    "category": "ram",
+    "brand": "Samsung",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/samsung-ecc-ddr5-4800.png"
+  },
+  {
+    "id": 83,
+    "name": "Kingston Server Premier ECC 16GB DDR4 3200MHz",
+    "price": 99.99,
+    "description": "Optimisé pour les plateformes serveurs.",
+    "category": "ram",
+    "brand": "Kingston",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/kingston-serverpremier-ddr4-3200.png"
+  },
+  {
+    "id": 84,
+    "name": "Micron ECC Registered 32GB DDR5 5600MHz",
+    "price": 149.99,
+    "description": "Module ECC DDR5 pour les serveurs avancés.",
+    "category": "ram",
+    "brand": "Micron",
+    "inStock": true,
+    "image": "./public/res/image/product-image/ram/micron-ecc-ddr5-5600.png"
+  }
 ];
 
 export function getRandomProduct(numberOfProducts) {
@@ -656,6 +858,19 @@ export function getRandomProduct(numberOfProducts) {
   }
 
   return randomProducts;
+}
+
+export function getProductByBrand(brand) {
+
+  let filteredProducts = [];
+  for (const product of products) {
+    if (product.brand === brand) {
+      filteredProducts.push(product);
+    }
+  }
+
+  return filteredProducts;
+
 }
 
 export function getProducts() {

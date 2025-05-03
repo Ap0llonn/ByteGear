@@ -31,7 +31,6 @@ function render(category) {
         }
     }
 
-
     let html = productCardList(filteredProducts);
     container.innerHTML = html;
 }

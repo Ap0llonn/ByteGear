@@ -304,9 +304,9 @@
                     </div>
                     
                     <div class="col-md-8">
-                        <div class="d-flex flex-wrap gap-2">
+                        <div class="d-flex flex-wrap gap-2" data-filter-container>
 
-                            <div class="filter-item">
+                            <div class="filter-item" data-filter="price">
                                 <select class="form-select">
                                     <option selected>Prix</option>
                                     <option value="0-500">0 - 500 $</option>
@@ -317,7 +317,7 @@
                             </div>
                             
                             <div class="filter-item">
-                                <select class="form-select">
+                                <select class="form-select" data-filter="brand">
                                     <option selected>Marque</option>
                                     <option value="nvidia">NVIDIA</option>
                                     <option value="amd">AMD</option>
@@ -328,7 +328,7 @@
                             </div>
                             
                             <div class="filter-item">
-                                <select class="form-select">
+                                <select class="form-select" data-filter="memory">
                                     <option selected>Mémoire</option>
                                     <option value="4">4 Go</option>
                                     <option value="8">8 Go</option>
@@ -339,7 +339,7 @@
                             </div>
                             
                             <div class="filter-item">
-                                <select class="form-select">
+                                <select class="form-select" data-filter="availability">
                                     <option selected>Disponibilité</option>
                                     <option value="en-stock">En stock</option>
                                     <option value="sur-commande">Sur commande</option>
@@ -465,6 +465,7 @@
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="./public/script/dynamic-product-page.js" type="module"></script>
+    <script type="module" src="./public/script/filterProduct.js"></script>
 
 </body>
 
