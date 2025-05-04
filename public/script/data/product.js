@@ -1,5 +1,4 @@
 const products = [
-
   {
     "id": 1,
     "name": "Intel Core i7-13700K 5.4 GHz",
@@ -1028,6 +1027,23 @@ export function getProductPriceASC(products) {
   return sortedProducts;
 }
 
+export function getProductNameASC(result) {
+  for (let i = 0; i < result.length - 1; i++) {
+    for (let j = i + 1; j < result.length; j++) {
+      if (result[i].name.localeCompare(result[j].name) > 0) {
+
+        let temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
+      }
+    }
+  }
+
+  return result;
+}
+
+
+
 
 export function getProductPriceRange(products, minPrice, maxPrice) {
   let sortedProducts = [...products];
@@ -1054,7 +1070,20 @@ export function getOutOfStockProducts(products) {
   return outOfStockProducts;
 }
 
-export function getProductByBrand(brand) {
+export function getStockProducts(products) {
+  let getStockProducts = [];
+
+  for (const product of products) {
+    if (product.inStock) {
+      getStockProducts.push(product);
+    }
+  }
+  
+  return getStockProducts;
+}
+
+
+export function getProductByBrand(products ,brand) {
 
   let filteredProducts = [];
   for (const product of products) {

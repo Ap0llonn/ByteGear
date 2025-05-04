@@ -1,0 +1,12 @@
+.user-payment-information{
+    border-radius: .25rem;
+    border: 1px solid var(--border);
+}
+
+.user-payment-information input{
+    border-radius: .25rem;
+}
+
+.card-information{
+    border-bottom: 1px solid var(--border);
+}

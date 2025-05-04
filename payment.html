@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="./public/style/timeline.css">
     <link rel="icon" href="./public/res/image/Logo/Logo.png">
     <link rel="stylesheet" href="./public/style/basket-review.css">
+    <link rel="stylesheet" href="./public/style/payment.css">
 
     <script src="./public/script/search-bar.js" type="module"></script>
 
+    <script type="module" src="./public/script/cookie-consent.js"></script>
 </head>
 
 <body>
-
     <header class="p-0 position-sticky b-white top-0 z-3">
         <nav
             class="container-md b-white pt-1 pb-1 navbar responsive-navbar navbar-expand-lg p-0 d-flex justify-content-between align-items-center">
@@ -40,7 +41,8 @@
             <div class="nav-btn d-none d-md-block">
                 <ul class="list-unstyled d-flex align-items-center gap-5 m-0">
                     <li><a href="#" class="text-decoration-none text-body-primary fw-bold">Compte</a></li>
-                    <li><a href="basket-review.html" class="text-decoration-none text-body-primary fw-bold basket-link">Panier
+                    <li><a href="basket-review.html"
+                            class="text-decoration-none text-body-primary fw-bold basket-link">Panier
                             <span class="b-accent nb-items-in-cart d-none">1</span>
                         </a>
                         <div class="basket-display b-light-border">
@@ -53,7 +55,8 @@
                             </div>
                             <div class="down">
                                 <ul class="list-unstyled d-flex flex-row justify-content-between gap-2 p-3">
-                                    <li><a href="basket-review.html" class="text-decoration-none">Voir le panier</a></li>
+                                    <li><a href="basket-review.html" class="text-decoration-none">Voir le panier</a>
+                                    </li>
                                     <li><a href="#" class="text-decoration-none">Passer à la caisse</a></li>
                                 </ul>
                             </div>
@@ -72,7 +75,8 @@
                     </button>
                     <ul class="nav-btn list-unstyled d-flex align-items-center gap-3 m-0">
                         <li><a href="#" class="text-white fs-5"><i class="bi bi-person-circle"></i></a></li>
-                        <li><a href="basket-review.html" class="text-white fs-5 text-decoration-none"><i class="bi bi-bag"></i>
+                        <li><a href="basket-review.html" class="text-white fs-5 text-decoration-none"><i
+                                    class="bi bi-bag"></i>
 
                                 <span class="b-accent nb-items-in-cart d-none"></span>
                             </a>
@@ -261,20 +265,20 @@
                         </a>
                         <ul class="collapse list-unstyled ps-3" id="collapseMemory">
                             <li>
-                                <a href="product-page.html#ram" class="text-white d-block py-1"
-                                    data-category="ram" data-subcategory="ddr4">
+                                <a href="product-page.html#ram" class="text-white d-block py-1" data-category="ram"
+                                    data-subcategory="ddr4">
                                     DDR4
                                 </a>
                             </li>
                             <li>
-                                <a href="product-page.html#ram" class="text-white d-block py-1"
-                                    data-category="ram" data-subcategory="ddr5">
+                                <a href="product-page.html#ram" class="text-white d-block py-1" data-category="ram"
+                                    data-subcategory="ddr5">
                                     DDR5
                                 </a>
                             </li>
                             <li>
-                                <a href="product-page.html#ram" class="text-white d-block py-1"
-                                    data-category="ram" data-subcategory="ecc">
+                                <a href="product-page.html#ram" class="text-white d-block py-1" data-category="ram"
+                                    data-subcategory="ecc">
                                     ECC
                                 </a>
                             </li>
@@ -282,7 +286,8 @@
                     </li>
 
 
-                    <li><a href="product-page.html#peripherique" data-category="peripherique" class="text-white text-decoration-none d-block py-2">Périphériques</a></li>
+                    <li><a href="product-page.html#peripherique" data-category="peripherique"
+                            class="text-white text-decoration-none d-block py-2">Périphériques</a></li>
                     <li><a href="#" class="text-white text-decoration-none d-block py-2">Contact</a></li>
                 </ul>
             </div>
@@ -290,19 +295,19 @@
         </div>
 
     </header>
-    <main>
 
+    <main>
         <section>
             <div class="time-line">
                 <div class="container py-5">
-                    <h2 class="text-center mb-5 text-body-primary">Panier</h2>
+                    <h2 class="text-center mb-5 text-body-primary">Paiment</h2>
 
                     <div class="stepper">
-                        <div class="step active">
+                        <div class="step done">
                             <div class="circle">1</div>
                             <div class="label">Panier</div>
                         </div>
-                        <div class="step">
+                        <div class="step active">
                             <div class="circle">2</div>
                             <div class="label">Paiment</div>
                         </div>
@@ -317,17 +322,63 @@
         </section>
 
         <section class="mb-5">
-            <div class="container ">
-                <div class="row flex-column flex-md-row justify-content-between">
-                    <div class="product-list col-12 col-md-7 " data-cart-overview-container>
-                       
+            <div class="container">
+                <div class="row flex-column flex-md-row justify-content-center gap-3">
+
+                    <div class="user-payment-information b-light col-12 col-md-4 p-2">
+                        <div class="basket-review-header">
+                            <h4>Information</h4>
+                        </div>
+                        <div class="card-information mt-3 pb-3">
+                            <label for="">Numéro de carte</label>
+                            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX"
+                                aria-label="Numéro de carte">
+                            <div class="input-group mt-3 mb-3 d-flex flex-column flex-sm-row gap-2">
+                                <div>
+                                    <label for="expiration-date">Date d'expiration</label>
+                                    <input type="text" id="expiration-date" class="form-control" placeholder="MM/AA"
+                                        aria-label="MM/AA">
+                                </div>
+                                <div>
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" class="form-control" placeholder="CVV" aria-label="CVV">
+                                </div>
+
+                            </div>
+                            <label for="card-owner">Titulaire de la carte</label>
+                            <input type="text" id="card-owner" class="form-control" placeholder="nom et prénom"
+                                aria-label="Titulaire de la carte">
+
+                        </div>
+                        <div class="user-information mt-3 pb-3">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" id="adresse" class="form-control" placeholder="ex : 123 rue de la paix"
+                                aria-label="Numéro de carte">
+                            <div class="input-group mt-3 mb-3 d-flex flex-column flex-sm-row gap-2">
+                                <div>
+                                    <label for="city">Ville</label>
+                                    <input type="text" id="city" class="form-control" placeholder="MM/AA"
+                                        aria-label="MM/AA">
+                                </div>
+                                <div>
+                                    <label for="zipcode">Code postal</label>
+                                    <input type="text" id="zipcode" class="form-control" placeholder="CVV" aria-label="CVV">
+                                </div>
+
+                            </div>
+                           
+                        </div>
                     </div>
+
                     <div class="basket-review col-12 col-md-4 p-1 ">
                         <div class="basket-review-header">
                             <h4>Résumé de votre commande</h4>
                         </div>
-                        
+
                         <div class="basket-review-content">
+                            <div class="product-list data-cart-overview-container">
+
+                            </div>
                             <div class="price-breakdown">
                                 <div class="price-row">
                                     <p>Sous-total</p>
@@ -347,25 +398,26 @@
                                     <p data-total-cart-overview class="fw-bold"></p>
                                 </div>
                             </div>
-                            
+
                             <div class="promo-code-section ">
                                 <div class="promo-header">
                                     <h5>Vous avez un code promo ?</h5>
                                 </div>
                                 <div class="promo-input-group d-flex  flex-row flex-sm-column">
-                                    <input type="text" class="promo-input" placeholder="Entrez votre code" aria-label="Code promo">
+                                    <input type="text" class="promo-input" placeholder="Entrez votre code"
+                                        aria-label="Code promo">
                                     <button class="promo-button p-2">Appliquer</button>
                                 </div>
                             </div>
-                            
+
                             <div class="checkout-actions">
                                 <div class="secure-checkout">
                                     <i class="fa-solid fa-lock"></i>
                                     <span>Paiement sécurisé</span>
                                 </div>
-                                <a href="payment.html" class="checkout-button text-center text-decoration-none">Procéder au paiement</a>
+                                <a href="payment.html" class="checkout-button text-center text-decoration-none">Confirmer commande</a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -457,10 +509,10 @@
             </div>
         </div>
     </footer>
+
     <script src="./public/script/app.js" type="module"></script>
     <script src="./public/vendors/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./public/script/cart-overview.js" type="module"></script>
-
 </body>
 
 </html>

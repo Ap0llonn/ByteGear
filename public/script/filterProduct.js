@@ -1,4 +1,4 @@
-import { getOutOfStockProducts, getProductByBrand, getProductPriceASC, getProductPriceRange, getProducts } from "./data/product.js";
+import { getOutOfStockProducts, getProductByBrand, getProductNameASC, getProductPriceASC, getProductPriceRange, getProducts, getStockProducts } from "./data/product.js";
 import { getFilteredProducts } from "./dynamic-product-page.js";
 import { productCardList } from "./templates/product-template.js";
 
@@ -12,6 +12,7 @@ let products = getFilteredProducts();
 let selectedBrand = null;
 let selectedPrice = null;
 let selectedSort = null;
+let selectedAvailability = null;
 
 let brands = [];
 
@@ -24,6 +25,7 @@ function initFilter() {
             const type = e.target.dataset.filter;
             const value = e.target.value;
 
+            if (type === "availability") selectedAvailability = value;
             if (type === "brand") selectedBrand = value;
             if (type === "price") selectedPrice = value;
             if (type === "sort") selectedSort = value;
@@ -37,7 +39,7 @@ function initFilter() {
 function applyAllFilters() {
     let result = [...products];
 
-    result = getOutOfStockProducts(result);
+    result = handleAvailabilitySort(result);
 
     result = handleBrandSort(result);
 
@@ -48,12 +50,22 @@ function applyAllFilters() {
     render(result);
 }
 
+function handleAvailabilitySort(result) {
+    console.log("selectedAvailability", selectedAvailability);
+    if (selectedAvailability === "en-stock") {
+        result = getStockProducts(result);
+    } else if (selectedAvailability === "rupture") {
+        result = getOutOfStockProducts(result);
+    }
+    return result;
+}
+
 
 function handleBrandSort(result) {
     if (selectedBrand) {
         for (const product of result) {
             if (product.brand === selectedBrand) {
-                result = getProductByBrand(product.brand);
+                result = getProductByBrand(result ,product.brand);
             }
 
         }
@@ -80,10 +92,12 @@ function handleSort(result) {
     } else if (selectedSort === "price-desc") {
         result = getProductPriceASC(result).reverse();
     } else if (selectedSort === "name-asc") {
-        result.sort((a, b) => a.name.localeCompare(b.name));
+        result = getProductNameASC(result);
     } else if (selectedSort === "name-desc") {
-        result.sort((a, b) => b.name.localeCompare(a.name));
+        result = getProductNameASC(result).reverse();
     }
+
+    console.log("selectedSort", result);
     return result;
 }
 
@@ -115,9 +129,12 @@ function checkProductsBrand() {
 
 }
 
-
-
 function render(filteredProducts) {
+
+    if (filteredProducts.length === 0) {
+        container.innerHTML = `<p class="text-center">Aucun produit trouvé</p>`;
+        return;
+    }
     let html = productCardList(filteredProducts);
 
     container.innerHTML = html;

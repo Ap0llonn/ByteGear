@@ -4,11 +4,13 @@ import { productCardList } from "./templates/product-template.js";
 
 const products = getProducts();
 const container = document.querySelector("[data-product-container]");
+const titleContent = document.querySelector(".product-page-title");
 
 function init() {
 
     let hash = location.hash.replace('#', '');
     let category = hash === "" ? "all" : hash;
+    titleContent.textContent = category;
     render(category);
     initAddToCart();
 }
