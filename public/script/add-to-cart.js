@@ -11,7 +11,10 @@ const totalItemElement = document.querySelector("[data-total-item]");
 
 export function initAddToCart() {
 
+
+
     const addToCartButtons = document.querySelectorAll("[data-add-to-cart]");
+
     for (const button of addToCartButtons) {
         button.addEventListener('click', handleProduct);
 
@@ -20,47 +23,62 @@ export function initAddToCart() {
     addToCartContainer.addEventListener('input', e => {
         const input = e.target.closest('[data-quantity-input]');
         if (!input) return;
-    
+
         const id = input.dataset.id;
-        const index = basket.findIndex(item => item.id === id);
+        let index = findIndex(id);
         if (index === -1) return;
-    
+
         const quantity = parseInt(input.value, 10);
         if (isNaN(quantity) || quantity < 1) return;
-    
+
         basket[index].quantity = quantity;
-    
-        subTotal = basket.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
-        nbItems = basket.reduce((acc, item) => acc + (item.quantity || 1), 0);
-    
+
+        recalculateTotals();
+
         updateDisplay();
     });
 
     addToCartContainer.addEventListener('click', e => {
-    const btn = e.target.closest('[data-delete-cart-product]');
-    if (!btn) return;
-    e.preventDefault();
+        const btn = e.target.closest('[data-delete-cart-product]');
+        if (!btn) return;
+        e.preventDefault();
 
-    const id = btn.dataset.id;
-    const index = basket.findIndex(item => item.id === id);
-    if (index === -1) return;
+        const id = btn.dataset.id;
 
-    basket.splice(index, 1);
-    localStorage.setItem('userBasket', JSON.stringify(basket));
+        let index = findIndex(id);
+        if (index === -1) return;
 
+        basket.splice(index, 1);
+        localStorage.setItem('userBasket', JSON.stringify(basket));
 
-    nbItems = basket.reduce((acc, item) => acc + item.quantity, 0);
-    subTotal = basket.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+        recalculateTotals();
 
-    console.log(basket);
-    console.log(nbItems);
+        updateDisplay();
+        renderResults();
+    });
 
-    updateDisplay();
-    renderResults();
-});
-    
-    console.log(basket);
+}
 
+function findIndex(id) {
+    let index = -1;
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i].id === id) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+function recalculateTotals() {
+    subTotal = 0;
+    nbItems = 0;
+
+    for (let i = 0; i < basket.length; i++) {
+        const quantity = basket[i].quantity || 1;
+        subTotal += basket[i].price * quantity;
+        nbItems += quantity;
+    }
 }
 
 function updateDisplay() {

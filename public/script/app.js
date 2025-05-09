@@ -3,10 +3,15 @@ import { loadBasketOverview } from "./cart-overview.js";
 import { updateFilterOnHashChange, initFilter } from "./filterProduct.js";
 import { initPopularProduct, initRecommendeProduct } from "./product-list.js";
 import { initSearchBar } from "./search-bar.js";
-import { initProductPage } from "./dynamic-product-page.js"; // <== Make sure it's exported
+import { initProductPage } from "./dynamic-product-page.js";
+
+initSearchBar();
 
 window.addEventListener('DOMContentLoaded', () => {
     const addToCartContainer = document.querySelector("[data-add-to-cart-container]");
+
+    initPopularProduct();
+    initRecommendeProduct();
 
     if (addToCartContainer) {
         initAddToCart();
@@ -22,28 +27,22 @@ window.addEventListener('DOMContentLoaded', () => {
         updateFilterOnHashChange();
     }
 
-    if (document.querySelector("[data-search-bar]")) {
-        initSearchBar();
-    }
 
-    initPopularProduct();
-    initRecommendeProduct();
 });
 
 window.addEventListener('hashchange', () => {
     const addToCartContainer = document.querySelector("[data-add-to-cart-container]");
-    
+
     if (addToCartContainer) {
         loadBasket(addToCartContainer);
     }
 
     updateFilterOnHashChange();
-    
-    if (typeof initProductPage === 'function') {
-        initProductPage();
-    }
+
+    initProductPage();
 
     if (document.querySelector("[data-cart-overview-container]")) {
         loadBasketOverview();
     }
+
 });
