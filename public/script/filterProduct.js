@@ -51,7 +51,7 @@ function applyAllFilters() {
 }
 
 function handleAvailabilitySort(result) {
-    console.log("selectedAvailability", selectedAvailability);
+  
     if (selectedAvailability === "en-stock") {
         result = getStockProducts(result);
     } else if (selectedAvailability === "rupture") {
@@ -97,7 +97,6 @@ function handleSort(result) {
         result = getProductNameASC(result).reverse();
     }
 
-    console.log("selectedSort", result);
     return result;
 }
 
@@ -121,8 +120,6 @@ function checkProductsBrand() {
     for (const product of products) {
         if (!brands.includes(product.brand)) {
             brands.push(product.brand);
-        } else {
-            console.log("Brand already exists: " + product.brand);
         }
     }
     return brands;

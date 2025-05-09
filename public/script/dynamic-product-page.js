@@ -43,6 +43,7 @@ export function getFilteredProducts() {
     return products.filter(product => product.category === category);
 }
 
-
+window.addEventListener('DOMContentLoaded', initProductPage);
+window.addEventListener('hashchange', initProductPage);
 window.addEventListener('DOMContentLoaded', loadBasket);
 window.addEventListener('hashchange', loadBasket);

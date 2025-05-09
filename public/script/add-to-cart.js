@@ -11,43 +11,55 @@ const totalItemElement = document.querySelector("[data-total-item]");
 
 export function initAddToCart() {
 
-        const addToCartButtons = document.querySelectorAll("[data-add-to-cart]");
-        for (const button of addToCartButtons) {
-            button.addEventListener('click', handleProduct);
+    const addToCartButtons = document.querySelectorAll("[data-add-to-cart]");
+    for (const button of addToCartButtons) {
+        button.addEventListener('click', handleProduct);
 
-        }
+    }
 
-        addToCartContainer.addEventListener('input', e => {
-            const input = e.target.closest('[data-quantity-input]');
-            if (!input) return;
+    addToCartContainer.addEventListener('input', e => {
+        const input = e.target.closest('[data-quantity-input]');
+        if (!input) return;
+    
+        const id = input.dataset.id;
+        const index = basket.findIndex(item => item.id === id);
+        if (index === -1) return;
+    
+        const quantity = parseInt(input.value, 10);
+        if (isNaN(quantity) || quantity < 1) return;
+    
+        basket[index].quantity = quantity;
+    
+        subTotal = basket.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
+        nbItems = basket.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    
+        updateDisplay();
+    });
 
-            const index = parseInt(input.dataset.index);
-            const quantity = parseInt(input.value, 10);
-            if (isNaN(quantity) || quantity < 1) return;
+    addToCartContainer.addEventListener('click', e => {
+    const btn = e.target.closest('[data-delete-cart-product]');
+    if (!btn) return;
+    e.preventDefault();
 
-            basket[index].quantity = quantity;
-            subTotal = basket.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
-            nbItems = basket.reduce((acc, item) => acc + (item.quantity || 1), 0);
-            updateDisplay();
-        });
+    const id = btn.dataset.id;
+    const index = basket.findIndex(item => item.id === id);
+    if (index === -1) return;
 
-        addToCartContainer.addEventListener('click', e => {
-            const btn = e.target.closest('[data-delete-cart-product]');
-            if (!btn) return;
-            e.preventDefault();
+    basket.splice(index, 1);
+    localStorage.setItem('userBasket', JSON.stringify(basket));
 
-            const id = parseInt(btn.dataset.index, 10);
-            if (isNaN(id)) return;
 
-            const [removed] = basket.splice(id, 1);
-            localStorage.setItem('userBasket', JSON.stringify(basket));
+    nbItems = basket.reduce((acc, item) => acc + item.quantity, 0);
+    subTotal = basket.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
-            nbItems -= removed.quantity;
-            subTotal -= parseFloat(removed.price * removed.quantity);
-            updateDisplay();
+    console.log(basket);
+    console.log(nbItems);
 
-            renderResults();
-        });
+    updateDisplay();
+    renderResults();
+});
+    
+    console.log(basket);
 
 }
 
@@ -76,6 +88,7 @@ function handleProduct(e) {
     e.preventDefault();
 
     const button = e.currentTarget;
+    const productId = button.dataset.productId;
     const productCard = button.closest('.product-card');
     const productName = productCard.dataset.productName;
     const productPrice = productCard.dataset.productPrice;
@@ -89,7 +102,7 @@ function handleProduct(e) {
             basket[index].quantity++;
             nbItems++;
             subTotal += parseFloat(productPrice);
-            
+
             updateDisplay();
             renderResults();
             localStorage.setItem('userBasket', JSON.stringify(basket));
@@ -99,6 +112,7 @@ function handleProduct(e) {
     }
 
     basket.push({
+        id: productId,
         name: productName,
         price: productPrice,
         image: productImage,
@@ -146,7 +160,7 @@ function renderResults() {
             name: p.name,
             price: p.price,
             quantity: p.quantity,
-            index: i
+            id: p.id
 
         });
     }
