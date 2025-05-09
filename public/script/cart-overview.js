@@ -12,7 +12,7 @@ const basket = JSON.parse(localStorage.getItem('userBasket')) || [];
 const TAX = 0.15;
 const DELIVERY_FEE = 0.05;
 
-function loadBasketOverview() {
+export function loadBasketOverview() {
 
     
     let subTotal = 0;

@@ -16,7 +16,7 @@ let selectedAvailability = null;
 
 let brands = [];
 
-function initFilter() {
+export function initFilter() {
     checkProductsBrand();
     updarteBrandFilter();
 
@@ -140,9 +140,8 @@ function render(filteredProducts) {
     container.innerHTML = html;
 }
 
-initFilter();
 
-window.addEventListener("hashchange", function () {
+export function updateFilterOnHashChange() {
     products = getFilteredProducts();
 
     const brandSelect = document.querySelector('select[data-filter="brand"]');
@@ -151,4 +150,4 @@ window.addEventListener("hashchange", function () {
     brands = [];
     checkProductsBrand();
     updarteBrandFilter();
-});
+}

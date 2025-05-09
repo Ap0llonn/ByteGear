@@ -6,7 +6,7 @@ const products = getProducts();
 const container = document.querySelector("[data-product-container]");
 const titleContent = document.querySelector(".product-page-title");
 
-function init() {
+export function initProductPage() {
 
     let hash = location.hash.replace('#', '');
     let category = hash === "" ? "all" : hash;
@@ -43,7 +43,6 @@ export function getFilteredProducts() {
     return products.filter(product => product.category === category);
 }
 
-window.addEventListener('DOMContentLoaded', init);
-window.addEventListener('hashchange', init);
+
 window.addEventListener('DOMContentLoaded', loadBasket);
 window.addEventListener('hashchange', loadBasket);
