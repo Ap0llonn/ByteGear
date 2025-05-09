@@ -34,25 +34,29 @@ export function loadBasketOverview() {
         const input = e.target.closest('[data-quantity-input]');
         if (!input) return;
 
-        const index = parseInt(input.dataset.index);
+        const id = input.dataset.id;
+        let index = findIndex(id);
         const quantity = parseInt(input.value, 10);
         if (isNaN(quantity) || quantity < 1) return;
 
         basket[index].quantity = quantity;
         subTotal = basket.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
+        
         ({ taxes, delivery, total } = calculatePrice(taxes, subTotal, delivery, total));
         updateDisplay(subTotal, total, taxes, delivery);
     });
 
     cartOverviewContainer.addEventListener('click', e => {
+        
         const btn = e.target.closest('[data-delete-cart-product]');
         if (!btn) return;
         e.preventDefault();
 
-        const id = parseInt(btn.dataset.index, 10);
-        if (isNaN(id)) return;
+        const id = btn.dataset.id;
+        let index = findIndex(id);
+        if (index === -1) return;
 
-        const [removed] = basket.splice(id, 1);
+        const [removed] = basket.splice(index, 1);
         localStorage.setItem('userBasket', JSON.stringify(basket));
 
         nbItems -= removed.quantity;
@@ -63,6 +67,17 @@ export function loadBasketOverview() {
         renderResults();
     });
 
+}
+
+function findIndex(id) {
+    let index = -1;
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i].id === id) {
+            index = i;
+            break;
+        }
+    }
+    return index;
 }
 
 function calculatePrice(taxes, subTotal, delivery, total) {
@@ -94,7 +109,7 @@ function renderResults() {
             name: p.name,
             price: p.price,
             quantity: p.quantity,
-            index: i
+            id: p.id
 
         });
     }

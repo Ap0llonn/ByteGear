@@ -20,44 +20,51 @@ export function initAddToCart() {
 
     }
 
-    addToCartContainer.addEventListener('input', e => {
-        const input = e.target.closest('[data-quantity-input]');
-        if (!input) return;
+    addToCartContainer.addEventListener('input', handleInput);
 
-        const id = input.dataset.id;
-        let index = findIndex(id);
-        if (index === -1) return;
-
-        const quantity = parseInt(input.value, 10);
-        if (isNaN(quantity) || quantity < 1) return;
-
-        basket[index].quantity = quantity;
-
-        recalculateTotals();
-
-        updateDisplay();
-    });
-
-    addToCartContainer.addEventListener('click', e => {
-        const btn = e.target.closest('[data-delete-cart-product]');
-        if (!btn) return;
-        e.preventDefault();
-
-        const id = btn.dataset.id;
-
-        let index = findIndex(id);
-        if (index === -1) return;
-
-        basket.splice(index, 1);
-        localStorage.setItem('userBasket', JSON.stringify(basket));
-
-        recalculateTotals();
-
-        updateDisplay();
-        renderResults();
-    });
+    addToCartContainer.addEventListener('click', handleClick);
 
 }
+
+export function handleInput(e) {
+    const input = e.target.closest('[data-quantity-input]');
+    if (!input) return;
+
+    const id = input.dataset.id;
+    let index = findIndex(id);
+    if (index === -1) return;
+
+    const quantity = parseInt(input.value, 10);
+    if (isNaN(quantity) || quantity < 1) return;
+
+    basket[index].quantity = quantity;
+
+    recalculateTotals();
+
+    updateDisplay();
+}
+
+
+export function handleClick(e) {
+    const btn = e.target.closest('[data-delete-cart-product]');
+    if (!btn) return;
+    e.preventDefault();
+
+    const id = btn.dataset.id;
+
+    let index = findIndex(id);
+    if (index === -1) return;
+
+    basket.splice(index, 1);
+    localStorage.setItem('userBasket', JSON.stringify(basket));
+
+    recalculateTotals();
+
+    updateDisplay();
+    renderResults();
+}
+
+
 
 function findIndex(id) {
     let index = -1;
