@@ -11,8 +11,6 @@ const totalItemElement = document.querySelector("[data-total-item]");
 
 export function initAddToCart() {
 
-
-
     const addToCartButtons = document.querySelectorAll("[data-add-to-cart]");
 
     for (const button of addToCartButtons) {
@@ -64,8 +62,6 @@ export function handleClick(e) {
     renderResults();
 }
 
-
-
 function findIndex(id) {
     let index = -1;
     for (let i = 0; i < basket.length; i++) {
@@ -114,7 +110,7 @@ function handleProduct(e) {
 
     const button = e.currentTarget;
     const productId = button.dataset.productId;
-    const productCard = button.closest('.product-card');
+    const productCard = button.closest(".product-card");
     const productName = productCard.dataset.productName;
     const productPrice = productCard.dataset.productPrice;
     const productImage = productCard.dataset.productImage;

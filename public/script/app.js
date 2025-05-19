@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (document.querySelector("[data-filter]")) {
+        console.log("hellp")
         initFilter();
         updateFilterOnHashChange();
     }
