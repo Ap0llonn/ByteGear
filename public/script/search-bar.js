@@ -1,7 +1,7 @@
 import { getProducts } from "./data/product.js";
 import { searchProductTemplate } from "./templates/product-template.js";
 
-const allSearchBars = document.querySelectorAll('.search-bar, .mobile-search-bar');
+const allSearchBars = document.querySelectorAll(".search-bar, .mobile-search-bar");
 
 const allProducts = getProducts();
 
@@ -27,8 +27,8 @@ export function initSearchBar() {
             container.classList.remove("d-none");
         });
 
-        input.addEventListener('blur', () => {
-            container.classList.add('d-none');
+        input.addEventListener("blur", () => {
+            container.classList.add("d-none");
         });
 
     }
@@ -46,7 +46,7 @@ function renderResults(products, container) {
     container.innerHTML = '<ul class="list-unstyled d-flex flex-column gap-2 m-0">' + itemsHTML + '</ul>';
 }
 
-function filterProductByName(text, container) {
+function filterProductByName(text) {
     const terms = text
         .toLowerCase()
         .trim()

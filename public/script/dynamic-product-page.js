@@ -8,7 +8,7 @@ const titleContent = document.querySelector(".product-page-title");
 
 export function initProductPage() {
 
-    let hash = location.hash.replace('#', '');
+    let hash = location.hash.replace("#", "");
     let category = hash === "" ? "all" : hash;
     renderTitle(category);
     render(category);
@@ -47,12 +47,12 @@ function render(category) {
 }
 
 export function getFilteredProducts() {
-    let hash = location.hash.replace('#', '');
+    let hash = location.hash.replace("#", "");
     let category = hash === "" ? "all" : hash;
     return products.filter(product => product.category === category);
 }
 
-window.addEventListener('DOMContentLoaded', initProductPage);
-window.addEventListener('hashchange', initProductPage);
-window.addEventListener('DOMContentLoaded', loadBasket);
-window.addEventListener('hashchange', loadBasket);
+window.addEventListener("DOMContentLoaded", initProductPage);
+window.addEventListener("hashchange", initProductPage);
+window.addEventListener("DOMContentLoaded", loadBasket);
+window.addEventListener("hashchange", loadBasket);
