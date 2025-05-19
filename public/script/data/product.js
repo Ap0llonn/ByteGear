@@ -1042,9 +1042,6 @@ export function getProductNameASC(result) {
   return result;
 }
 
-
-
-
 export function getProductPriceRange(products, minPrice, maxPrice) {
   let sortedProducts = [...products];
 
