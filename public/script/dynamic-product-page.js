@@ -10,9 +10,18 @@ export function initProductPage() {
 
     let hash = location.hash.replace('#', '');
     let category = hash === "" ? "all" : hash;
-    titleContent.textContent = category;
+    renderTitle(category);
     render(category);
     initAddToCart();
+}
+
+function renderTitle(category) {
+    if (category == "Carte-graphique") {
+        titleContent.textContent = "Carte graphique";
+        return;
+    }
+
+    titleContent.textContent = category;
 }
 
 function render(category) {
